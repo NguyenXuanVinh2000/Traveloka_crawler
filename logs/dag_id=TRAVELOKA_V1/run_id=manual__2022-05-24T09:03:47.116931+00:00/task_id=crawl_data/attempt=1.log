@@ -1,0 +1,831 @@
+[2022-05-24 09:03:48,002] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T09:03:47.116931+00:00 [queued]>
+[2022-05-24 09:03:48,038] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T09:03:47.116931+00:00 [queued]>
+[2022-05-24 09:03:48,039] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 09:03:48,039] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-05-24 09:03:48,039] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 09:03:48,353] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): crawl_data> on 2022-05-24 09:03:47.116931+00:00
+[2022-05-24 09:03:48,359] {standard_task_runner.py:52} INFO - Started process 102 to run task
+[2022-05-24 09:03:48,361] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'TRAVELOKA_V1', 'crawl_data', 'manual__2022-05-24T09:03:47.116931+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/test/test.py', '--cfg-path', '/tmp/tmp5jxho2ql', '--error-file', '/tmp/tmpbv9gr19g']
+[2022-05-24 09:03:48,362] {standard_task_runner.py:80} INFO - Job 116: Subtask crawl_data
+[2022-05-24 09:03:48,590] {task_command.py:369} INFO - Running <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T09:03:47.116931+00:00 [running]> on host c33ddf328585
+[2022-05-24 09:03:48,747] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=TRAVELOKA_V1
+AIRFLOW_CTX_DAG_ID=TRAVELOKA_V1
+AIRFLOW_CTX_TASK_ID=crawl_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-24T09:03:47.116931+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-24T09:03:47.116931+00:00
+[2022-05-24 09:03:48,748] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-24 09:03:48,748] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dags/test && scrapy crawl hotel']
+[2022-05-24 09:03:48,761] {subprocess.py:85} INFO - Output:
+[2022-05-24 09:03:58,644] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:5: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,644] {subprocess.py:92} INFO -   hotel_name = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,644] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:6: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO -   hotel_rating = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:7: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO -   hotel_address = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:8: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO -   hotel_point_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:9: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO -   hotel_sum_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:10: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 09:03:58,645] {subprocess.py:92} INFO -   hotel_url = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 09:03:58,646] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: hotel)
+[2022-05-24 09:03:58,646] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.7.13 (default, Apr 20 2022, 06:19:04) - [GCC 10.2.1 20210110], pyOpenSSL 21.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform Linux-5.4.0-110-generic-x86_64-with-debian-11.3
+[2022-05-24 09:03:58,653] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.crawler] INFO: Overridden settings:
+[2022-05-24 09:03:58,653] {subprocess.py:92} INFO - {'BOT_NAME': 'hotel',
+[2022-05-24 09:03:58,653] {subprocess.py:92} INFO -  'DOWNLOAD_DELAY': 5,
+[2022-05-24 09:03:58,654] {subprocess.py:92} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2022-05-24 09:03:58,654] {subprocess.py:92} INFO -  'NEWSPIDER_MODULE': 'hotel.spiders',
+[2022-05-24 09:03:58,654] {subprocess.py:92} INFO -  'SPIDER_MODULES': ['hotel.spiders']}
+[2022-05-24 09:03:58,656] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+[2022-05-24 09:03:58,676] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.extensions.telnet] INFO: Telnet Password: 681d08d1d3b33fbe
+[2022-05-24 09:03:58,730] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.middleware] INFO: Enabled extensions:
+[2022-05-24 09:03:58,730] {subprocess.py:92} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2022-05-24 09:03:58,730] {subprocess.py:92} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2022-05-24 09:03:58,730] {subprocess.py:92} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2022-05-24 09:03:58,731] {subprocess.py:92} INFO -  'scrapy.extensions.logstats.LogStats']
+[2022-05-24 09:03:58,955] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2022-05-24 09:03:58,955] {subprocess.py:92} INFO - ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2022-05-24 09:03:58,955] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2022-05-24 09:03:58,955] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2022-05-24 09:03:58,956] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2022-05-24 09:03:58,993] {subprocess.py:92} INFO - 2022-05-24 09:03:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2022-05-24 09:03:58,993] {subprocess.py:92} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2022-05-24 09:03:58,994] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+[2022-05-24 09:03:58,994] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2022-05-24 09:03:58,994] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2022-05-24 09:03:58,994] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2022-05-24 09:03:59,157] {subprocess.py:92} INFO - 2022-05-24 09:03:59 [scrapy.middleware] INFO: Enabled item pipelines:
+[2022-05-24 09:03:59,157] {subprocess.py:92} INFO - ['hotel.pipelines.QuotesSpiderPipeline']
+[2022-05-24 09:03:59,157] {subprocess.py:92} INFO - 2022-05-24 09:03:59 [scrapy.core.engine] INFO: Spider opened
+[2022-05-24 09:03:59,339] {subprocess.py:92} INFO - 2022-05-24 09:03:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 09:03:59,341] {subprocess.py:92} INFO - 2022-05-24 09:03:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2022-05-24 09:03:59,876] {subprocess.py:92} INFO - 2022-05-24 09:03:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (308) to <GET https://www.traveloka.com/vi-vn/hotel> from <GET https://www.traveloka.com/vi-vn/hotel/>
+[2022-05-24 09:04:03,586] {subprocess.py:92} INFO - 2022-05-24 09:04:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel> (referer: None)
+[2022-05-24 09:04:13,355] {subprocess.py:92} INFO - 2022-05-24 09:04:13 [tldextract.cache] WARNING: unable to cache publicsuffix.org-tlds.{'urls': ('https://publicsuffix.org/list/public_suffix_list.dat', 'https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat'), 'fallback_to_snapshot': True} in /home/***/.cache/python-tldextract/3.7.13.final__local__ecb11d__tldextract-3.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json. This could refresh the Public Suffix List over HTTP every app startup. Construct your `TLDExtract` with a writable `cache_dir` or set `cache_dir=None` to silence this warning. [Errno 13] Permission denied: '/home/***/.cache/python-tldextract'
+[2022-05-24 09:04:13,362] {subprocess.py:92} INFO - 2022-05-24 09:04:13 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+[2022-05-24 09:04:13,616] {subprocess.py:92} INFO - 2022-05-24 09:04:13 [urllib3.connectionpool] DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 None
+[2022-05-24 09:04:13,736] {subprocess.py:92} INFO - 2022-05-24 09:04:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:15,743] {subprocess.py:92} INFO - 2022-05-24 09:04:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-city-10010083>
+[2022-05-24 09:04:24,206] {subprocess.py:92} INFO - 2022-05-24 09:04:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:31,052] {subprocess.py:92} INFO - 2022-05-24 09:04:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ho-chi-minh-city-10009794> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:31,218] {subprocess.py:92} INFO - 2022-05-24 09:04:31 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+[2022-05-24 09:04:38,888] {subprocess.py:92} INFO - 2022-05-24 09:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:48,715] {subprocess.py:92} INFO - 2022-05-24 09:04:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:49,915] {subprocess.py:92} INFO - 2022-05-24 09:04:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/quy-nhon-city-10009975> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:04:53,087] {subprocess.py:92} INFO - 2022-05-24 09:04:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-10010308> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-ancient-town-10010308>
+[2022-05-24 09:04:59,341] {subprocess.py:92} INFO - 2022-05-24 09:04:59 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 7 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 09:05:00,028] {subprocess.py:92} INFO - 2022-05-24 09:05:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-10010169> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-city-10010169>
+[2022-05-24 09:05:07,909] {subprocess.py:92} INFO - 2022-05-24 09:05:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-10009843> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-noi-city-10009843>
+[2022-05-24 09:05:14,389] {subprocess.py:92} INFO - 2022-05-24 09:05:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/vung-tau-city-10009888> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:05:21,043] {subprocess.py:92} INFO - 2022-05-24 09:05:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:05:26,930] {subprocess.py:92} INFO - 2022-05-24 09:05:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:05:27,134] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,134] {subprocess.py:92} INFO - {'hotel_address': '62 Trần Phú, Phường Lộc Thọ, Lộc Thọ, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -  'hotel_name': 'Khách Sạn Citadines Bayfront Nha Trang',
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -  'hotel_sum_review': '131',
+[2022-05-24 09:05:27,135] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/citadines-bayfront-nha-trang-3000010042791'}
+[2022-05-24 09:05:27,140] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:27,148] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,148] {subprocess.py:92} INFO - {'hotel_address': '60 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -                   '6500000',
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -  'hotel_name': 'Muong Thanh Luxury Nha Trang',
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -  'hotel_sum_review': '363',
+[2022-05-24 09:05:27,149] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/muong-thanh-luxury-nha-trang-1000000482039'}
+[2022-05-24 09:05:27,153] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO - {'hotel_address': '39 - 41 Nguyễn Thị Minh Khai, Tân Lập, Nha Trang, Khánh '
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -  'hotel_name': 'Virgo Hotel Nha Trang',
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -  'hotel_sum_review': '67',
+[2022-05-24 09:05:27,161] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/virgo-hotel-nha-trang-9000000134929'}
+[2022-05-24 09:05:27,166] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:27,177] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,177] {subprocess.py:92} INFO - {'hotel_address': 'Khu 1 – khu dân cư Cồn Tân Lập, Xương Huân, Nha Trang, '
+[2022-05-24 09:05:27,177] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam, 651057',
+[2022-05-24 09:05:27,178] {subprocess.py:92} INFO -  'hotel_name': 'Muong Thanh Luxury Khanh Hoa Hotel',
+[2022-05-24 09:05:27,178] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,178] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,178] {subprocess.py:92} INFO -  'hotel_sum_review': '541',
+[2022-05-24 09:05:27,178] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/muong-thanh-luxury-khanh-hoa-hotel-3000020017982'}
+[2022-05-24 09:05:27,182] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:27,193] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,193] {subprocess.py:92} INFO - {'hotel_address': 'Phạm Văn Đồng, Vĩnh Hòa, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,193] {subprocess.py:92} INFO -                   '652551',
+[2022-05-24 09:05:27,193] {subprocess.py:92} INFO -  'hotel_name': 'Boton Blue Hotel & Spa',
+[2022-05-24 09:05:27,193] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,194] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,194] {subprocess.py:92} INFO -  'hotel_sum_review': '99',
+[2022-05-24 09:05:27,194] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/boton-blue-hotel--spa-3000020003519'}
+[2022-05-24 09:05:27,198] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO - {'hotel_address': 'Đảo Hòn Tằm, Phường Vĩnh Nguyên, Vĩnh Nguyên, Nha Trang, '
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam, 65000',
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -  'hotel_name': 'Resort MerPerle Hòn Tằm',
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -  'hotel_sum_review': '148',
+[2022-05-24 09:05:27,209] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/merperle-hon-tam-resort-1000000367144'}
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO - {'hotel_address': '86/4 Trần Phú, Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Quinter Central Nha Trang',
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -  'hotel_sum_review': '64',
+[2022-05-24 09:05:27,224] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/quinter-central-hotel-nha-trang-3000020004900'}
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO - {'hotel_address': '38 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO -  'hotel_name': 'Premier Havana Nha Trang Hotel',
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,235] {subprocess.py:92} INFO -  'hotel_sum_review': '176',
+[2022-05-24 09:05:27,236] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/premier-havana-nha-trang-hotel-1000000432590'}
+[2022-05-24 09:05:27,246] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,246] {subprocess.py:92} INFO - {'hotel_address': '39 - 41 Nguyễn Thị Minh Khai, Tân Lập, Nha Trang, Khánh '
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Regalia Gold Nha Trang',
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -  'hotel_sum_review': '35',
+[2022-05-24 09:05:27,247] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/regalia-gold-hotel-nha-trang-9000000640104'}
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO - {'hotel_address': 'Lô 4D, Bắc Bán Đảo Cam Ranh, Bãi Dài, Cam Hải Đông, Nha '
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -                   'Trang, Khánh Hòa, Việt Nam, 655242',
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -  'hotel_name': 'Cam Ranh Riviera Beach Resort & Spa',
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -  'hotel_sum_review': '51',
+[2022-05-24 09:05:27,258] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/cam-ranh-riviera-beach-resort--spa-1000000510567'}
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO - {'hotel_address': 'Bãi Đông, Cam Hải Đông, Cam Hải Đông, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO -                   'Việt Nam, 655242',
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO -  'hotel_name': 'Mia Resort Nha Trang',
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,269] {subprocess.py:92} INFO -  'hotel_sum_review': '38',
+[2022-05-24 09:05:27,270] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/mia-resort-nha-trang-1000000414813'}
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO - {'hotel_address': 'Lô 10  Đại Lộ Nguyễn Tất Thành, Cam Hải Đông, Nha Trang, '
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -  'hotel_name': 'Fusion Resort Cam Ranh - All Spa Inclusive',
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -  'hotel_sum_review': '38',
+[2022-05-24 09:05:27,281] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/fusion-resort-cam-ranh---all-spa-inclusive-1000000511467'}
+[2022-05-24 09:05:27,292] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,292] {subprocess.py:92} INFO - {'hotel_address': '04 Đường Pasteur, Xương Huân, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:27,292] {subprocess.py:92} INFO -                   'Nam, 651005',
+[2022-05-24 09:05:27,292] {subprocess.py:92} INFO -  'hotel_name': 'TTC Hotel – Michelia',
+[2022-05-24 09:05:27,292] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 09:05:27,293] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,293] {subprocess.py:92} INFO -  'hotel_sum_review': '71',
+[2022-05-24 09:05:27,293] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ttc-hotel--michelia-1000000365100'}
+[2022-05-24 09:05:27,303] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,303] {subprocess.py:92} INFO - {'hotel_address': '32-34 Trần Phú, Phường Lộc Thọ, Lộc Thọ, Nha Trang, Khánh '
+[2022-05-24 09:05:27,303] {subprocess.py:92} INFO -                   'Hòa, Việt Nam',
+[2022-05-24 09:05:27,303] {subprocess.py:92} INFO -  'hotel_name': 'The Costa Nha Trang Residences',
+[2022-05-24 09:05:27,304] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:27,304] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,304] {subprocess.py:92} INFO -  'hotel_sum_review': '74',
+[2022-05-24 09:05:27,304] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/the-costa-nha-trang-residences-1000000469337'}
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO - {'hotel_address': 'D9B, Cam Lâm, Cam Hải Đông, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -  'hotel_name': 'Duyên Hà Resort Cam Ranh',
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -  'hotel_sum_review': '180',
+[2022-05-24 09:05:27,315] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/duyen-ha-resort-cam-ranh-3000010036554'}
+[2022-05-24 09:05:27,326] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,326] {subprocess.py:92} INFO - {'hotel_address': '100 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,326] {subprocess.py:92} INFO -                   '652076',
+[2022-05-24 09:05:27,326] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Queen Ann Nha Trang',
+[2022-05-24 09:05:27,327] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 09:05:27,327] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,327] {subprocess.py:92} INFO -  'hotel_sum_review': '18',
+[2022-05-24 09:05:27,327] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/queen-ann-nha-trang-hotel-3000010039314'}
+[2022-05-24 09:05:27,337] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,337] {subprocess.py:92} INFO - {'hotel_address': 'Vịnh Ninh Vân, Nha Trang, Ninh Hòa, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -  'hotel_name': "L'Alya Ninh Van Bay",
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -  'hotel_sum_review': '40',
+[2022-05-24 09:05:27,338] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/lalya-ninh-van-bay-1000000398994'}
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO - {'hotel_address': '32-34 Tran Phu Street,Khanh Hoa Province, Lộc Thọ, Nha '
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO -                   'Trang, Khánh Hòa, Việt Nam, 300202',
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO -  'hotel_name': 'InterContinental Hotels NHA TRANG',
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,349] {subprocess.py:92} INFO -  'hotel_sum_review': '58',
+[2022-05-24 09:05:27,350] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/intercontinental-hotels-nha-trang-1000000453251'}
+[2022-05-24 09:05:27,359] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO - {'hotel_address': 'Plot D12, Cam Hai Dong, Cam Hải Đông, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -                   'Việt Nam, 57615',
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -  'hotel_name': 'Movenpick Resort Cam Ranh',
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -  'hotel_sum_review': '67',
+[2022-05-24 09:05:27,360] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/movenpick-resort-cam-ranh-9000000533663'}
+[2022-05-24 09:05:27,370] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,370] {subprocess.py:92} INFO - {'hotel_address': '12-14 Trần Phú, Xương Huân, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:27,370] {subprocess.py:92} INFO -                   'Nam, 65000',
+[2022-05-24 09:05:27,371] {subprocess.py:92} INFO -  'hotel_name': 'Sunrise Nha Trang Beach Hotel & Spa',
+[2022-05-24 09:05:27,371] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:27,371] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,371] {subprocess.py:92} INFO -  'hotel_sum_review': '125',
+[2022-05-24 09:05:27,371] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/sunrise-nha-trang-beach-hotel--spa-1000000250395'}
+[2022-05-24 09:05:27,383] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,383] {subprocess.py:92} INFO - {'hotel_address': '304 Đường 2/4, Phường Vĩnh Phước, Ngọc Hiệp, Nha Trang, '
+[2022-05-24 09:05:27,383] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam',
+[2022-05-24 09:05:27,384] {subprocess.py:92} INFO -  'hotel_name': 'Khách Sạn Champa Island Nha Trang',
+[2022-05-24 09:05:27,384] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 09:05:27,384] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,384] {subprocess.py:92} INFO -  'hotel_sum_review': '45',
+[2022-05-24 09:05:27,384] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/champa-island-nha-trang-resort-hotel--spa-1000000535667'}
+[2022-05-24 09:05:27,395] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,395] {subprocess.py:92} INFO - {'hotel_address': '18 Trần Hưng Đạo, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -                   '652120',
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -  'hotel_name': 'Ariyana SmartCondotel Nha Trang',
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -  'hotel_sum_review': '67',
+[2022-05-24 09:05:27,396] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ariyana-smartcondotel-nha-trang-3000020003806'}
+[2022-05-24 09:05:27,407] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,407] {subprocess.py:92} INFO - {'hotel_address': 'Hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Resort & Spa Nha Trang Bay ',
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -  'hotel_sum_review': '178',
+[2022-05-24 09:05:27,408] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-resort--spa-nha-trang-bay--1000000488027'}
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO - {'hotel_address': '26-28 Tran Phu Street, Lộc Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -                   'Nam, 57000',
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Sheraton Nha Trang',
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -  'hotel_point_review': '8.2',
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -  'hotel_sum_review': '68',
+[2022-05-24 09:05:27,419] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/sheraton-nha-trang-hotel--spa-1000000326999'}
+[2022-05-24 09:05:27,430] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO - {'hotel_address': '20 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -  'hotel_name': 'Diamond Bay Hotel Nha Trang',
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -  'hotel_sum_review': '59',
+[2022-05-24 09:05:27,431] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/diamond-bay-hotel-nha-trang-1000000573323'}
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO - {'hotel_address': 'Vịnh Nha Trang, Đường Phạm Văn Đồng, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -  'hotel_name': 'Amiana Resort Nha Trang',
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -  'hotel_point_review': '8.0',
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -  'hotel_sum_review': '11',
+[2022-05-24 09:05:27,442] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/amiana-resort-nha-trang-1000000430822'}
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO - {'hotel_address': 'Đảo Hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Resort Nha Trang ',
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,453] {subprocess.py:92} INFO -  'hotel_sum_review': '29',
+[2022-05-24 09:05:27,454] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-resort-nha-trang--1000000192322'}
+[2022-05-24 09:05:27,464] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,464] {subprocess.py:92} INFO - {'hotel_address': 'Bãi Dài, Cam Ranh, Cam Hải Đông, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:27,464] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:27,464] {subprocess.py:92} INFO -  'hotel_name': 'The Anam Nha Trang',
+[2022-05-24 09:05:27,464] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 09:05:27,465] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,465] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 09:05:27,465] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/the-anam-nha-trang-1000000629041'}
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO - {'hotel_address': 'Hòn Heo, Vịnh Ninh Vân, Nha Trang, Ninh Hòa, Khánh Hòa, '
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO -                   'Việt Nam, 750000',
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO -  'hotel_name': 'An Lam Retreats Ninh Van Bay',
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 09:05:27,475] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,476] {subprocess.py:92} INFO -  'hotel_sum_review': '22',
+[2022-05-24 09:05:27,476] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/an-lam-retreats-ninh-van-bay-1000000650931'}
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO - {'hotel_address': '44 - 46 Lê Thánh Tôn, Phường Lộc Thọ, Lộc Thọ, Nha Trang, '
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam, 65000',
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Condotel Empire Nha Trang',
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,486] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,487] {subprocess.py:92} INFO -  'hotel_sum_review': '36',
+[2022-05-24 09:05:27,487] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-condotel-empire-nha-trang-3000020012428'}
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO - {'hotel_address': 'D6B2, D7A1, Cam Hải Đông, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Resort & Spa Long Beach Nha Trang',
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -  'hotel_sum_review': '14',
+[2022-05-24 09:05:27,497] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-resort--spa-long-beach-nha-trang-3000020001482'}
+[2022-05-24 09:05:27,507] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO - {'hotel_address': 'Hon Tre Island, Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -                   'Nam, 57000',
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Golf Land Resort & Villas',
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -  'hotel_sum_review': '125',
+[2022-05-24 09:05:27,508] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-golf-land-resort--villas-1000000557885'}
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO - {'hotel_address': 'Đảo hòn Tre, Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Luxury Nha Trang\xa0',
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -  'hotel_sum_review': '104',
+[2022-05-24 09:05:27,518] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-luxury-nha-trang-1000000379888'}
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO - {'hotel_address': '78 - 80 Trần Phú, Phường Lộc Thọ, Lộc Thọ, Nha Trang, Khánh '
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 57000',
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Condotel Beachfront Nha Trang',
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,529] {subprocess.py:92} INFO -  'hotel_sum_review': '8',
+[2022-05-24 09:05:27,530] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-condotel-beachfront-nha-trang-3000020016539'}
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498/5-star-hotels-in-nha-trang>
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO - {'hotel_address': 'Ninh Van Bay, Nha Trang, Ninh Hòa, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -                   '57000',
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -  'hotel_name': 'Six Senses Ninh Van Bay',
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -  'hotel_point_review': '9.5',
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -  'hotel_sum_review': '12',
+[2022-05-24 09:05:27,540] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/six-senses-ninh-van-bay-1000000228362'}
+[2022-05-24 09:05:27,949] {subprocess.py:92} INFO - 2022-05-24 09:05:27 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,140] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,141] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,141] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,142] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,253] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,311] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,312] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,313] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,313] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,367] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,426] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,427] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,427] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,428] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,482] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,541] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,542] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,543] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,543] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,595] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,659] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,660] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,661] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,663] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,728] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,798] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,799] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,799] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:28,800] {subprocess.py:92} INFO - 2022-05-24 09:05:28 [root] INFO: Add data in tabel
+[2022-05-24 09:05:33,110] {subprocess.py:92} INFO - 2022-05-24 09:05:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/dien-khanh-district-10010164> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:05:40,663] {subprocess.py:92} INFO - 2022-05-24 09:05:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/van-ninh-district-10009840> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:05:40,860] {subprocess.py:92} INFO - 2022-05-24 09:05:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/van-ninh-district-10009840>
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Đông Nam, xã Đại Lãnh, Vạn Ninh, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -  'hotel_name': 'Le Plateau Hostel Dai Lanh',
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -  'hotel_sum_review': '6',
+[2022-05-24 09:05:40,861] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/le-plateau-hostel-dai-lanh-3000020008653'}
+[2022-05-24 09:05:40,862] {subprocess.py:92} INFO - 2022-05-24 09:05:40 [root] INFO: Add data in tabel
+[2022-05-24 09:05:40,876] {subprocess.py:92} INFO - 2022-05-24 09:05:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/van-ninh-district-10009840>
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO - {'hotel_address': 'Vạn Thạnh, xã Vạn Thạnh, Vạn Ninh, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -                   '653591',
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -  'hotel_name': 'The Light Coral Island Resort',
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -  'hotel_rating': '4.5',
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -  'hotel_sum_review': '15',
+[2022-05-24 09:05:40,877] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/the-light-coral-island-resort-3000010039408'}
+[2022-05-24 09:05:40,880] {subprocess.py:92} INFO - 2022-05-24 09:05:40 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,165] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:05:48,340] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,340] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Bình Ba, Xã Cam Bình, Cam Bình, Thành phố Cam Ranh, '
+[2022-05-24 09:05:48,340] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam, 654722',
+[2022-05-24 09:05:48,340] {subprocess.py:92} INFO -  'hotel_name': 'Anami Resort Bình Ba',
+[2022-05-24 09:05:48,341] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 09:05:48,341] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:05:48,341] {subprocess.py:92} INFO -  'hotel_sum_review': '119',
+[2022-05-24 09:05:48,341] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/anami-resort-binh-ba-3000020000792'}
+[2022-05-24 09:05:48,342] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,358] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,358] {subprocess.py:92} INFO - {'hotel_address': '74 Đại Lộ Hùng Vương, Cam Nghĩa, Thành phố Cam Ranh, Khánh '
+[2022-05-24 09:05:48,358] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 654537',
+[2022-05-24 09:05:48,358] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Triều Khang Cam Ranh',
+[2022-05-24 09:05:48,359] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 09:05:48,359] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:48,359] {subprocess.py:92} INFO -  'hotel_sum_review': '116',
+[2022-05-24 09:05:48,359] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/trieu-khang-hotel-3000010042658'}
+[2022-05-24 09:05:48,359] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,371] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,371] {subprocess.py:92} INFO - {'hotel_address': '2A Nguyễn Chí Thanh, Cam Nghĩa, Thành phố Cam Ranh, Khánh '
+[2022-05-24 09:05:48,371] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO -  'hotel_name': 'Navy Hotel Cam Ranh',
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO -  'hotel_sum_review': '97',
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/navy-hotel-cam-ranh-3000020013843'}
+[2022-05-24 09:05:48,372] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO - {'hotel_address': 'Bình Lập, Cam Lập, Thành phố Cam Ranh, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -  'hotel_name': 'Sao Biển Cam Ranh - Khu Du Lịch Sinh Thái',
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -  'hotel_sum_review': '36',
+[2022-05-24 09:05:48,384] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/starfish-cam-ranh-bay-3000020017412'}
+[2022-05-24 09:05:48,385] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,396] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,396] {subprocess.py:92} INFO - {'hotel_address': 'Q3, Đường Q3, Cam Thuận, Thành phố Cam Ranh, Khánh Hòa, '
+[2022-05-24 09:05:48,396] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:05:48,396] {subprocess.py:92} INFO -  'hotel_name': 'Hai Phat Hotel',
+[2022-05-24 09:05:48,397] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 09:05:48,397] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:48,397] {subprocess.py:92} INFO -  'hotel_sum_review': '14',
+[2022-05-24 09:05:48,397] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/hai-phat-hotel-9000000122330'}
+[2022-05-24 09:05:48,397] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,413] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,413] {subprocess.py:92} INFO - {'hotel_address': 'Bãi Nồm, Cam Bình, Thành phố Cam Ranh, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:48,413] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:48,414] {subprocess.py:92} INFO -  'hotel_name': 'Lobster Hotel',
+[2022-05-24 09:05:48,414] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:48,414] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:05:48,414] {subprocess.py:92} INFO -  'hotel_sum_review': '86',
+[2022-05-24 09:05:48,414] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/lobster-hotel-9000000370438'}
+[2022-05-24 09:05:48,415] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,429] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO - {'hotel_address': '2013 Hùng Vương, Cam Lộc, Thành phố Cam Ranh, Khánh Hòa, '
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -                   'Việt Nam, 654536',
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -  'hotel_name': 'Thai Binh Cam Ranh Hotel',
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -  'hotel_rating': '4.5',
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -  'hotel_sum_review': '30',
+[2022-05-24 09:05:48,430] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/thai-binh-cam-ranh-hotel-3000020002444'}
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO - {'hotel_address': 'Bãi Dài, Cam Nghĩa, Thành phố Cam Ranh, Khánh Hòa, Việt '
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -  'hotel_name': 'Wyndham Grand KN Paradise Cam Ranh',
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 09:05:48,443] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/wyndham-grand-kn-paradise-cam-ranh-9000000545187'}
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Bình Ba Đông, Xã Cam Bình, Cam Bình, Thành phố Cam '
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -                   'Ranh, Khánh Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Biển Ngọc',
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -  'hotel_sum_review': '54',
+[2022-05-24 09:05:48,455] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/beach-pearl-hotel-3000020015762'}
+[2022-05-24 09:05:48,467] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,467] {subprocess.py:92} INFO - {'hotel_address': '147 Đại lộ Hùng Vương, Cam Nghĩa, Thành phố Cam Ranh, Khánh '
+[2022-05-24 09:05:48,467] {subprocess.py:92} INFO -                   'Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:48,468] {subprocess.py:92} INFO -  'hotel_name': 'Magnolia Hotel Cam Ranh',
+[2022-05-24 09:05:48,468] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 09:05:48,468] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:05:48,468] {subprocess.py:92} INFO -  'hotel_sum_review': '15',
+[2022-05-24 09:05:48,468] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/magnolia-hotel-cam-ranh-3000020017101'}
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO - {'hotel_address': '1647 Hùng Vương, Cam Phú, Thành phố Cam Ranh, Khánh Hòa, '
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO -  'hotel_name': 'Lily 2 Motel Nha Trang',
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO -  'hotel_point_review': '7.6',
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:48,480] {subprocess.py:92} INFO -  'hotel_sum_review': '18',
+[2022-05-24 09:05:48,481] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/lily-2-motel-nha-trang-3000020015652'}
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/cam-ranh-city-10010067>
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO - {'hotel_address': 'Bình Lập, Cam Lập, Thành phố Cam Ranh, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -  'hotel_name': 'Gem Island Resort',
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -  'hotel_sum_review': '19',
+[2022-05-24 09:05:48,492] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/gem-island-resort-3000020021167'}
+[2022-05-24 09:05:48,805] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,807] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,807] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:48,808] {subprocess.py:92} INFO - 2022-05-24 09:05:48 [root] INFO: Add data in tabel
+[2022-05-24 09:05:49,238] {subprocess.py:92} INFO - 2022-05-24 09:05:49 [root] INFO: Add data in tabel
+[2022-05-24 09:05:49,369] {subprocess.py:92} INFO - 2022-05-24 09:05:49 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,058] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO - {'hotel_address': 'B20-04, Panaroma Apartment, 02 Nguyễn Thị Minh Khai, Lộc '
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -                   'Thọ, Nha Trang, Khánh Hòa, Việt Nam, 650000',
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -  'hotel_name': 'Luong Nguyen Panaroma Apartment',
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -  'hotel_sum_review': '37',
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/luong-nguyen-panaroma-apartment-9000000325106'}
+[2022-05-24 09:05:55,223] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,235] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,235] {subprocess.py:92} INFO - {'hotel_address': '42 Trần Phú, Lộc Thọ, Lộc Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:55,235] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:55,235] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Nha Trang Lodge',
+[2022-05-24 09:05:55,235] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 09:05:55,236] {subprocess.py:92} INFO -  'hotel_rating': '3.5',
+[2022-05-24 09:05:55,236] {subprocess.py:92} INFO -  'hotel_sum_review': '176',
+[2022-05-24 09:05:55,236] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/nha-trang-lodge-hotel-1000000255204'}
+[2022-05-24 09:05:55,236] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO - {'hotel_address': '38 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -                   '652076',
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -  'hotel_name': 'Nha Trang Apartments',
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -  'hotel_point_review': '8.0',
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -  'hotel_sum_review': '10',
+[2022-05-24 09:05:55,247] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/nha-trang-apartments-3000010038610'}
+[2022-05-24 09:05:55,248] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,258] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,258] {subprocess.py:92} INFO - {'hotel_address': '38 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -  'hotel_name': 'Premier Havana Nha Trang Hotel',
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -  'hotel_point_review': '7.6',
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -  'hotel_sum_review': '10',
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/premier-havana-nha-trang-hotel-1000000432590'}
+[2022-05-24 09:05:55,259] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO - {'hotel_address': '26B Nguyễn Thiện Thuật, Lộc Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO -  'hotel_name': 'Little Nha Trang Hotel',
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 09:05:55,270] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:55,271] {subprocess.py:92} INFO -  'hotel_sum_review': '13',
+[2022-05-24 09:05:55,271] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/little-nha-trang-hotel-4000001027534'}
+[2022-05-24 09:05:55,271] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [root] INFO: Add data in tabel
+[2022-05-24 09:05:55,282] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,282] {subprocess.py:92} INFO - {'hotel_address': '43 To Hieu, Vinh Nguyen, Lộc Thọ, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:05:55,282] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:05:55,282] {subprocess.py:92} INFO -  'hotel_name': 'Nhà nghỉ Hoa Phượng',
+[2022-05-24 09:05:55,283] {subprocess.py:92} INFO -  'hotel_point_review': '7.7',
+[2022-05-24 09:05:55,283] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:05:55,283] {subprocess.py:92} INFO -  'hotel_sum_review': '111',
+[2022-05-24 09:05:55,283] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/spot-on-910-hoa-phuong-motel-9000000797450'}
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO - {'hotel_address': '28 Hùng Vương, Lộc Thọ, Lộc Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO -  'hotel_name': 'Central Hotel Nha Trang',
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:05:55,297] {subprocess.py:92} INFO -  'hotel_sum_review': '128',
+[2022-05-24 09:05:55,298] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/central-hotel-nha-trang-1000000531594'}
+[2022-05-24 09:05:55,308] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO - {'hotel_address': '12/1 Hùng Vương, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -                   '650000',
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -  'hotel_name': 'Thien An Hotel Nha Trang',
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -  'hotel_sum_review': '129',
+[2022-05-24 09:05:55,309] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/thien-an-hotel-nha-trang-3000010030639'}
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO - 2022-05-24 09:05:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/tram-huong-tower-6182824>
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO - {'hotel_address': '24 Hung Vuong, Loc Tho, Lộc Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Gonsala Nha Trang',
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -  'hotel_sum_review': '122',
+[2022-05-24 09:05:55,325] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/gonsala-hotel-nha-trang-9000000545380'}
+[2022-05-24 09:05:56,671] {subprocess.py:92} INFO - 2022-05-24 09:05:56 [root] INFO: Add data in tabel
+[2022-05-24 09:05:56,785] {subprocess.py:92} INFO - 2022-05-24 09:05:56 [root] INFO: Add data in tabel
+[2022-05-24 09:05:56,787] {subprocess.py:92} INFO - 2022-05-24 09:05:56 [root] INFO: Add data in tabel
+[2022-05-24 09:05:56,787] {subprocess.py:92} INFO - 2022-05-24 09:05:56 [root] INFO: Add data in tabel
+[2022-05-24 09:05:59,340] {subprocess.py:92} INFO - 2022-05-24 09:05:59 [scrapy.extensions.logstats] INFO: Crawled 14 pages (at 7 pages/min), scraped 58 items (at 58 items/min)
+[2022-05-24 09:06:02,633] {subprocess.py:92} INFO - 2022-05-24 09:06:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:06:08,078] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)
+[2022-05-24 09:06:08,215] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,215] {subprocess.py:92} INFO - {'hotel_address': '32B Cù Lao Trung, Vĩnh Thọ, Nha Trang, Khánh Hòa, Việt Nam, '
+[2022-05-24 09:06:08,215] {subprocess.py:92} INFO -                   '651102',
+[2022-05-24 09:06:08,215] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Dịu Dàng Nha Trang',
+[2022-05-24 09:06:08,215] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:06:08,216] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:06:08,216] {subprocess.py:92} INFO -  'hotel_sum_review': '67',
+[2022-05-24 09:06:08,216] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/diu-dang-hotel-nha-trang-3000010041132'}
+[2022-05-24 09:06:08,216] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO - {'hotel_address': '304 Đường 2/4, Phường Vĩnh Phước, Ngọc Hiệp, Nha Trang, '
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO -                   'Khánh Hòa, Việt Nam',
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO -  'hotel_name': 'Khách Sạn Champa Island Nha Trang',
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 09:06:08,231] {subprocess.py:92} INFO -  'hotel_sum_review': '24',
+[2022-05-24 09:06:08,232] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/champa-island-nha-trang-resort-hotel--spa-1000000535667'}
+[2022-05-24 09:06:08,232] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO - {'hotel_address': '12 Tôn Thất Tùng, Vĩnh Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO -  'hotel_name': 'Hoang Long Apartment',
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 09:06:08,247] {subprocess.py:92} INFO -  'hotel_rating': '1.5',
+[2022-05-24 09:06:08,248] {subprocess.py:92} INFO -  'hotel_sum_review': '10',
+[2022-05-24 09:06:08,248] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/hoang-long-apartment-9000000302019'}
+[2022-05-24 09:06:08,248] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO - {'hotel_address': '19/4A Hồ Tùng Mậu, Vĩnh Thọ, Nha Trang, Khánh Hòa, Việt '
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -                   'Nam, 650000',
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -  'hotel_name': "Ana's House Nha Trang",
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -  'hotel_sum_review': '6',
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/anas-house-nha-trang-1000000700007'}
+[2022-05-24 09:06:08,263] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:08,274] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO - {'hotel_address': '304 Đường 2/4, Vĩnh Phước, Ngọc Hiệp, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -  'hotel_name': 'Cham Oasis Nha Trang - Resort Condotel',
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -  'hotel_rating': '4.5',
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -  'hotel_sum_review': '541',
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/cham-oasis-nha-trang---resort-condotel-3000010028081'}
+[2022-05-24 09:06:08,275] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:08,286] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/po-nagar-cham-towers-6115841>
+[2022-05-24 09:06:08,286] {subprocess.py:92} INFO - {'hotel_address': '62 KA Hai Phuoc, Vinh Tho, Vĩnh Thọ, Nha Trang, Khánh Hòa, '
+[2022-05-24 09:06:08,286] {subprocess.py:92} INFO -                   'Việt Nam, 650000',
+[2022-05-24 09:06:08,286] {subprocess.py:92} INFO -  'hotel_name': 'Thap Ba HaNa Apartment',
+[2022-05-24 09:06:08,287] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 09:06:08,287] {subprocess.py:92} INFO -  'hotel_rating': '1.5',
+[2022-05-24 09:06:08,287] {subprocess.py:92} INFO -  'hotel_sum_review': '6',
+[2022-05-24 09:06:08,287] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/thap-ba-hana-apartment-3000020008878'}
+[2022-05-24 09:06:08,289] {subprocess.py:92} INFO - 2022-05-24 09:06:08 [root] INFO: Add data in tabel
+[2022-05-24 09:06:12,952] {subprocess.py:92} INFO - 2022-05-24 09:06:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hai-ha-10010563> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 09:06:19,694] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/region/ho-chi-minh-city-10009794)
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO - {'hotel_address': 'số nhà 47 đường 3/2, thị trấn Đồng Văn, thị trấn Đồng Văn, '
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO -                   'Đồng Văn, Hà Giang, Việt Nam, 310000',
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO -  'hotel_name': 'Hoang Ngoc Hotel - Ha Giang',
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:06:19,843] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:06:19,844] {subprocess.py:92} INFO -  'hotel_sum_review': '108',
+[2022-05-24 09:06:19,844] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/hoang-ngoc-hotel---ha-giang-3000010036848'}
+[2022-05-24 09:06:19,844] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,858] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 1, Xã Cầu Mè, Phường Nguyễn Trãi, xã Phương Thiện, Thành '
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -                   'phố Hà Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Anh Anh',
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -  'hotel_point_review': '8.2',
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/anh-anh-hotel-3000010036618'}
+[2022-05-24 09:06:19,859] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,870] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO - {'hotel_address': 'Km 5, Nguyễn Văn Linh, phường Quang Trung, Thành phố Hà '
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -  'hotel_name': 'Resort Trường Xuân',
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 09:06:19,871] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/truong-xuan-resort-3000010036659'}
+[2022-05-24 09:06:19,872] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,882] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,882] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 2, Mèo Vạc, thị trấn Mèo Vạc, Mèo Vạc, Hà Giang, Việt '
+[2022-05-24 09:06:19,882] {subprocess.py:92} INFO -                   'Nam, 310000',
+[2022-05-24 09:06:19,882] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Huyền Lợi',
+[2022-05-24 09:06:19,883] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 09:06:19,883] {subprocess.py:92} INFO -  'hotel_rating': '1.5',
+[2022-05-24 09:06:19,883] {subprocess.py:92} INFO -  'hotel_sum_review': '8',
+[2022-05-24 09:06:19,883] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/huyen-loi-hotel-3000010036809'}
+[2022-05-24 09:06:19,883] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO - {'hotel_address': 'Phuong Thien, xã Phương Thiện, Thành phố Hà Giang, Hà '
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 20000',
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO -  'hotel_name': 'Hà Giang Hostel',
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO -  'hotel_point_review': '7.6',
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:06:19,895] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 09:06:19,896] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ha-giang-hostel-9000000553069'}
+[2022-05-24 09:06:19,896] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,912] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,916] {subprocess.py:92} INFO - {'hotel_address': '525 Nguyễn Trãi, phường Nguyễn Trãi, Thành phố Hà Giang, Hà '
+[2022-05-24 09:06:19,916] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 311001',
+[2022-05-24 09:06:19,916] {subprocess.py:92} INFO -  'hotel_name': 'Nhà nghỉ Hương Trà 2',
+[2022-05-24 09:06:19,917] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 09:06:19,917] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:19,917] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 09:06:19,917] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/huong-tra-guesthouse-1-3000010037412'}
+[2022-05-24 09:06:19,917] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,929] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,929] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 7, Đồng Văn, thị trấn Đồng Văn, Đồng Văn, Hà Giang, Việt '
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -                   'Nam, 310000',
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -  'hotel_name': 'Tam Giac Mach Hotel',
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -  'hotel_sum_review': '28',
+[2022-05-24 09:06:19,930] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/tam-giac-mach-hotel-3000010036844'}
+[2022-05-24 09:06:19,945] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,945] {subprocess.py:92} INFO - {'hotel_address': '85 Minh Khai, phường Minh Khai, Thành phố Hà Giang, Hà '
+[2022-05-24 09:06:19,945] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 311021',
+[2022-05-24 09:06:19,945] {subprocess.py:92} INFO -  'hotel_name': '10am Hostel',
+[2022-05-24 09:06:19,945] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 09:06:19,946] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:19,946] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 09:06:19,946] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/10am-hostel-3000010037804'}
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO - {'hotel_address': '529A Nguyễn Văn Linh, phường Quang Trung, Thành phố Hà '
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -  'hotel_name': 'Green Hill Hostel',
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -  'hotel_sum_review': '31',
+[2022-05-24 09:06:19,961] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/green-hill-hostel-3000020006053'}
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO - {'hotel_address': '228 Ly Tu Trong Street, phường Trần Phú, Thành phố Hà '
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 70000',
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Tam Giác Mạch - Hà Giang',
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -  'hotel_sum_review': '6',
+[2022-05-24 09:06:19,976] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/tam-giac-mach-hotel-ha-giang-3000010042023'}
+[2022-05-24 09:06:19,984] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,984] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,985] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:19,985] {subprocess.py:92} INFO - 2022-05-24 09:06:19 [root] INFO: Add data in tabel
+[2022-05-24 09:06:23,340] {subprocess.py:92} INFO - 2022-05-24 09:06:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/quang-dien-10010568> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311)
+[2022-05-24 09:06:29,197] {subprocess.py:92} INFO - 2022-05-24 09:06:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/bac-binh-district-10010010> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286)
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO - 2022-05-24 09:06:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/bac-binh-district-10010010>
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Hồng Chính, Xã Hòa Thắng, Xã Hòa Thắng, Bắc Bình, Bình '
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO -                   'Thuận, Việt Nam, 770000',
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO -  'hotel_name': 'Stop And Go Lang Chai Boutique Resort',
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 09:06:29,346] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 09:06:29,347] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/stop-and-go-lang-chai-boutique-resort-9000000323778'}
+[2022-05-24 09:06:29,349] {subprocess.py:92} INFO - 2022-05-24 09:06:29 [root] INFO: Add data in tabel
+[2022-05-24 09:06:38,060] {subprocess.py:92} INFO - 2022-05-24 09:06:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-10010308> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:06:42,242] {subprocess.py:92} INFO - 2022-05-24 09:06:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-10010169> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 09:06:48,511] {subprocess.py:92} INFO - 2022-05-24 09:06:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/tay-son-district-10010656> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/quy-nhon-city-10009975)
+[2022-05-24 09:06:53,859] {subprocess.py:92} INFO - 2022-05-24 09:06:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/area/hoai-nhon-district-10010295> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/quy-nhon-city-10009975)
+[2022-05-24 09:06:53,995] {subprocess.py:92} INFO - 2022-05-24 09:06:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/area/hoai-nhon-district-10010295>
+[2022-05-24 09:06:53,995] {subprocess.py:92} INFO - {'hotel_address': 'Thiện Chánh, Xã Tam Quan Bắc, Huyện Hoài Nhơn, Bình Định, '
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -                   'Việt Nam, 593343',
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -  'hotel_name': 'Huong Bien Hotel',
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -  'hotel_point_review': '8.0',
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -  'hotel_sum_review': '17',
+[2022-05-24 09:06:53,996] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/huong-bien-hotel-3000020002856'}
+[2022-05-24 09:06:54,000] {subprocess.py:92} INFO - 2022-05-24 09:06:54 [root] INFO: Add data in tabel
+[2022-05-24 09:06:59,340] {subprocess.py:92} INFO - 2022-05-24 09:06:59 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 10 pages/min), scraped 76 items (at 18 items/min)
+[2022-05-24 09:07:00,694] {subprocess.py:92} INFO - 2022-05-24 09:07:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/chau-duc-district-10010104> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/vung-tau-city-10009888)
+[2022-05-24 09:07:10,250] {subprocess.py:92} INFO - 2022-05-24 09:07:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/an-bien-district-10009964> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570)
+[2022-05-24 09:07:11,949] {subprocess.py:92} INFO - 2022-05-24 09:07:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/kien-hai-district-10010344> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570)
+[2022-05-24 09:07:12,073] {subprocess.py:92} INFO - 2022-05-24 09:07:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/kien-hai-district-10010344>
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 4, Ấp Bãi Bấc, huyện Kiên Hải, TInh Kiên Giang, Xã Lại '
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -                   'Sơn, Kiên Hải, Tỉnh Kiên Giang, Việt Nam, 92000',
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -  'hotel_name': 'The Bac Homestay',
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 09:07:12,074] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/the-bac-homestay-9000000305896'}
+[2022-05-24 09:07:12,077] {subprocess.py:92} INFO - 2022-05-24 09:07:12 [root] INFO: Add data in tabel
+[2022-05-24 09:07:16,671] {local_task_job.py:221} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2022-05-24 09:07:16,672] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 102. PIDs of all processes in the group: [103, 102]
+[2022-05-24 09:07:16,672] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 102
+[2022-05-24 09:07:16,673] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-24 09:07:16,673] {subprocess.py:103} INFO - Sending SIGTERM signal to process group
+[2022-05-24 09:07:16,854] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 189, in execute
+    cwd=self.cwd,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/subprocess.py", line 90, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1543, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-05-24 09:07:16,858] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=TRAVELOKA_V1, task_id=crawl_data, execution_date=20220524T090347, start_date=20220524T090348, end_date=20220524T090716
+[2022-05-24 09:07:17,012] {standard_task_runner.py:97} ERROR - Failed to execute job 116 for task crawl_data ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(TRAVELOKA_V1, crawl_data, manual__2022-05-24T09:03:47.116931+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'crawl_data', 'dag_id': 'TRAVELOKA_V1', 'run_id': 'manual__2022-05-24T09:03:47.116931+00:00', 'map_index': -1, 'start_date': datetime.datetime(2022, 5, 24, 9, 3, 48, 4601, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2022, 5, 24, 9, 7, 16, 858271, tzinfo=Timezone('UTC')), 'duration': 208}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj); 102)
+[2022-05-24 09:07:17,045] {process_utils.py:75} INFO - Process psutil.Process(pid=102, status='terminated', exitcode=1, started='09:03:47') (102) terminated with exit code 1
+[2022-05-24 09:08:16,680] {process_utils.py:143} WARNING - process psutil.Process(pid=103, name='scrapy', status='sleeping', started='09:03:47') did not respond to SIGTERM. Trying SIGKILL
+[2022-05-24 09:08:16,681] {process_utils.py:80} INFO - Sending the signal Signals.SIGKILL to group 102
+[2022-05-24 09:08:16,681] {process_utils.py:95} INFO - Sending the signal Signals.SIGKILL to process 102 as process group is missing.
+[2022-05-24 09:08:48,438] {process_utils.py:75} INFO - Process psutil.Process(pid=103, name='scrapy', status='terminated', started='09:03:47') (103) terminated with exit code None

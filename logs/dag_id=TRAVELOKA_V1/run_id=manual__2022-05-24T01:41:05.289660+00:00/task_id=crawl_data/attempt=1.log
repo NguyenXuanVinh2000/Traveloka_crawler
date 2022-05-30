@@ -1,0 +1,163 @@
+[2022-05-24 01:41:09,893] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [queued]>
+[2022-05-24 01:41:09,905] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [queued]>
+[2022-05-24 01:41:09,905] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:41:09,905] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-05-24 01:41:09,905] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:41:09,957] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): crawl_data> on 2022-05-24 01:41:05.289660+00:00
+[2022-05-24 01:41:09,961] {standard_task_runner.py:52} INFO - Started process 1228 to run task
+[2022-05-24 01:41:09,965] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'TRAVELOKA_V1', 'crawl_data', 'manual__2022-05-24T01:41:05.289660+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/test/test.py', '--cfg-path', '/tmp/tmpox0t9f7p', '--error-file', '/tmp/tmpb_n6dlvr']
+[2022-05-24 01:41:09,966] {standard_task_runner.py:80} INFO - Job 30: Subtask crawl_data
+[2022-05-24 01:41:10,051] {task_command.py:369} INFO - Running <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [running]> on host d0800a19c55b
+[2022-05-24 01:41:10,253] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=TRAVELOKA_V1
+AIRFLOW_CTX_DAG_ID=TRAVELOKA_V1
+AIRFLOW_CTX_TASK_ID=crawl_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-24T01:41:05.289660+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-24T01:41:05.289660+00:00
+[2022-05-24 01:41:10,254] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-24 01:41:10,254] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dags/test && scrapy crawl hotel']
+[2022-05-24 01:41:10,263] {subprocess.py:85} INFO - Output:
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:5: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO -   hotel_name = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:6: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO -   hotel_rating = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:7: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO -   hotel_address = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:8: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO -   hotel_point_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:9: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO -   hotel_sum_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,464] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:10: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:41:14,465] {subprocess.py:92} INFO -   hotel_url = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:41:14,465] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: hotel)
+[2022-05-24 01:41:14,465] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.7.13 (default, Apr 20 2022, 06:19:04) - [GCC 10.2.1 20210110], pyOpenSSL 21.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform Linux-5.4.0-110-generic-x86_64-with-debian-11.3
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.crawler] INFO: Overridden settings:
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO - {'BOT_NAME': 'hotel',
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO -  'DOWNLOAD_DELAY': 5,
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO -  'NEWSPIDER_MODULE': 'hotel.spiders',
+[2022-05-24 01:41:14,471] {subprocess.py:92} INFO -  'SPIDER_MODULES': ['hotel.spiders']}
+[2022-05-24 01:41:14,473] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+[2022-05-24 01:41:14,487] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.extensions.telnet] INFO: Telnet Password: 70a6f2b157604112
+[2022-05-24 01:41:14,528] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.middleware] INFO: Enabled extensions:
+[2022-05-24 01:41:14,528] {subprocess.py:92} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2022-05-24 01:41:14,528] {subprocess.py:92} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2022-05-24 01:41:14,529] {subprocess.py:92} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2022-05-24 01:41:14,529] {subprocess.py:92} INFO -  'scrapy.extensions.logstats.LogStats']
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO - ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2022-05-24 01:41:14,611] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2022-05-24 01:41:14,612] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2022-05-24 01:41:14,612] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2022-05-24 01:41:14,612] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2022-05-24 01:41:14,612] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2022-05-24 01:41:14,613] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2022-05-24 01:41:14,613] {subprocess.py:92} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2022-05-24 01:41:14,613] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+[2022-05-24 01:41:14,614] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2022-05-24 01:41:14,614] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2022-05-24 01:41:14,614] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2022-05-24 01:41:14,622] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,622] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,623] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,624] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,624] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,624] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,625] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,626] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,626] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,627] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,627] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,627] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,628] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,628] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,629] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,630] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,630] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,630] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,631] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,631] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,632] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,632] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,632] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,632] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,633] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,633] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,633] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,634] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,634] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,635] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,635] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,636] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,636] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,637] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,637] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,637] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,638] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,638] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,638] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,638] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,639] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,639] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,639] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,640] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,640] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:41:14,641] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.middleware] INFO: Enabled item pipelines:
+[2022-05-24 01:41:14,642] {subprocess.py:92} INFO - ['hotel.pipelines.QuotesSpiderPipeline']
+[2022-05-24 01:41:14,642] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.core.engine] INFO: Spider opened
+[2022-05-24 01:41:14,793] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 01:41:14,795] {subprocess.py:92} INFO - 2022-05-24 01:41:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+[2022-05-24 01:41:15,131] {subprocess.py:92} INFO - 2022-05-24 01:41:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (308) to <GET https://www.traveloka.com/vi-vn/hotel> from <GET https://www.traveloka.com/vi-vn/hotel/>
+[2022-05-24 01:41:21,100] {subprocess.py:92} INFO - 2022-05-24 01:41:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel> (referer: None)
+[2022-05-24 01:41:24,546] {subprocess.py:92} INFO - 2022-05-24 01:41:24 [tldextract.cache] WARNING: unable to cache publicsuffix.org-tlds.{'urls': ('https://publicsuffix.org/list/public_suffix_list.dat', 'https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat'), 'fallback_to_snapshot': True} in /home/***/.cache/python-tldextract/3.7.13.final__local__ecb11d__tldextract-3.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json. This could refresh the Public Suffix List over HTTP every app startup. Construct your `TLDExtract` with a writable `cache_dir` or set `cache_dir=None` to silence this warning. [Errno 13] Permission denied: '/home/***/.cache/python-tldextract'
+[2022-05-24 01:41:24,554] {subprocess.py:92} INFO - 2022-05-24 01:41:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+[2022-05-24 01:41:24,699] {subprocess.py:92} INFO - 2022-05-24 01:41:24 [urllib3.connectionpool] DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 None
+[2022-05-24 01:41:24,751] {subprocess.py:92} INFO - 2022-05-24 01:41:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-10010169> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-city-10010169>
+[2022-05-24 01:41:29,310] {subprocess.py:92} INFO - 2022-05-24 01:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-10009843> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-noi-city-10009843>
+[2022-05-24 01:41:37,498] {subprocess.py:92} INFO - 2022-05-24 01:41:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/vung-tau-city-10009888> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:41:43,360] {subprocess.py:92} INFO - 2022-05-24 01:41:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:41:51,080] {subprocess.py:92} INFO - 2022-05-24 01:41:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:41:54,494] {subprocess.py:92} INFO - 2022-05-24 01:41:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-city-10010083>
+[2022-05-24 01:42:01,182] {subprocess.py:92} INFO - 2022-05-24 01:42:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:42:04,185] {subprocess.py:92} INFO - 2022-05-24 01:42:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ho-chi-minh-city-10009794> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:42:04,346] {subprocess.py:92} INFO - 2022-05-24 01:42:04 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+[2022-05-24 01:42:08,925] {subprocess.py:92} INFO - 2022-05-24 01:42:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:42:11,948] {subprocess.py:92} INFO - 2022-05-24 01:42:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/quy-nhon-city-10009975> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:42:14,794] {subprocess.py:92} INFO - 2022-05-24 01:42:14 [scrapy.extensions.logstats] INFO: Crawled 8 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 01:42:16,011] {subprocess.py:92} INFO - 2022-05-24 01:42:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:42:22,761] {subprocess.py:92} INFO - 2022-05-24 01:42:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-10010308> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-ancient-town-10010308>
+[2022-05-24 01:42:25,029] {local_task_job.py:221} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2022-05-24 01:42:25,032] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1228. PIDs of all processes in the group: [1229, 1228]
+[2022-05-24 01:42:25,032] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 1228
+[2022-05-24 01:42:25,032] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-24 01:42:25,033] {subprocess.py:103} INFO - Sending SIGTERM signal to process group
+[2022-05-24 01:42:25,052] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 189, in execute
+    cwd=self.cwd,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/subprocess.py", line 90, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1543, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-05-24 01:42:25,063] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=TRAVELOKA_V1, task_id=crawl_data, execution_date=20220524T014105, start_date=20220524T014109, end_date=20220524T014225
+[2022-05-24 01:42:25,135] {standard_task_runner.py:97} ERROR - Failed to execute job 30 for task crawl_data (Task received SIGTERM signal; 1228)
+[2022-05-24 01:42:25,164] {process_utils.py:75} INFO - Process psutil.Process(pid=1228, status='terminated', exitcode=1, started='01:41:09') (1228) terminated with exit code 1
+[2022-05-24 01:43:25,045] {process_utils.py:143} WARNING - process psutil.Process(pid=1229, name='scrapy', status='sleeping', started='01:41:09') did not respond to SIGTERM. Trying SIGKILL
+[2022-05-24 01:43:25,047] {process_utils.py:80} INFO - Sending the signal Signals.SIGKILL to group 1228
+[2022-05-24 01:43:25,047] {process_utils.py:95} INFO - Sending the signal Signals.SIGKILL to process 1228 as process group is missing.
+[2022-05-24 01:43:56,935] {process_utils.py:75} INFO - Process psutil.Process(pid=1229, name='scrapy', status='terminated', started='01:41:09') (1229) terminated with exit code None

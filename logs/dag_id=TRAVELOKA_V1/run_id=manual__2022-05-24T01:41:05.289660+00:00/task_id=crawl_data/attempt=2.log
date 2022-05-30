@@ -1,0 +1,1363 @@
+[2022-05-24 01:47:30,395] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [queued]>
+[2022-05-24 01:47:30,408] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [queued]>
+[2022-05-24 01:47:30,408] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:47:30,408] {taskinstance.py:1357} INFO - Starting attempt 2 of 1
+[2022-05-24 01:47:30,408] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:47:30,861] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): crawl_data> on 2022-05-24 01:41:05.289660+00:00
+[2022-05-24 01:47:30,872] {standard_task_runner.py:52} INFO - Started process 1793 to run task
+[2022-05-24 01:47:30,882] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'TRAVELOKA_V1', 'crawl_data', 'manual__2022-05-24T01:41:05.289660+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/test/test.py', '--cfg-path', '/tmp/tmp_qg7ykrp', '--error-file', '/tmp/tmptqi4qdfj']
+[2022-05-24 01:47:30,883] {standard_task_runner.py:80} INFO - Job 32: Subtask crawl_data
+[2022-05-24 01:47:31,059] {task_command.py:369} INFO - Running <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:41:05.289660+00:00 [running]> on host d0800a19c55b
+[2022-05-24 01:47:32,122] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=TRAVELOKA_V1
+AIRFLOW_CTX_DAG_ID=TRAVELOKA_V1
+AIRFLOW_CTX_TASK_ID=crawl_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-24T01:41:05.289660+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-24T01:41:05.289660+00:00
+[2022-05-24 01:47:32,123] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-24 01:47:32,124] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dags/test && scrapy crawl hotel']
+[2022-05-24 01:47:32,133] {subprocess.py:85} INFO - Output:
+[2022-05-24 01:47:34,081] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:5: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_name = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:6: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_rating = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:7: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_address = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:8: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_point_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:9: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_sum_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:10: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:47:34,082] {subprocess.py:92} INFO -   hotel_url = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:47:34,083] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: hotel)
+[2022-05-24 01:47:34,084] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.7.13 (default, Apr 20 2022, 06:19:04) - [GCC 10.2.1 20210110], pyOpenSSL 21.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform Linux-5.4.0-110-generic-x86_64-with-debian-11.3
+[2022-05-24 01:47:34,090] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.crawler] INFO: Overridden settings:
+[2022-05-24 01:47:34,091] {subprocess.py:92} INFO - {'BOT_NAME': 'hotel',
+[2022-05-24 01:47:34,091] {subprocess.py:92} INFO -  'DOWNLOAD_DELAY': 5,
+[2022-05-24 01:47:34,091] {subprocess.py:92} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2022-05-24 01:47:34,091] {subprocess.py:92} INFO -  'NEWSPIDER_MODULE': 'hotel.spiders',
+[2022-05-24 01:47:34,091] {subprocess.py:92} INFO -  'SPIDER_MODULES': ['hotel.spiders']}
+[2022-05-24 01:47:34,093] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+[2022-05-24 01:47:34,107] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.extensions.telnet] INFO: Telnet Password: 30d69b171bc04ac4
+[2022-05-24 01:47:34,150] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.middleware] INFO: Enabled extensions:
+[2022-05-24 01:47:34,150] {subprocess.py:92} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2022-05-24 01:47:34,150] {subprocess.py:92} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2022-05-24 01:47:34,150] {subprocess.py:92} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2022-05-24 01:47:34,150] {subprocess.py:92} INFO -  'scrapy.extensions.logstats.LogStats']
+[2022-05-24 01:47:34,243] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2022-05-24 01:47:34,243] {subprocess.py:92} INFO - ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2022-05-24 01:47:34,243] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2022-05-24 01:47:34,244] {subprocess.py:92} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2022-05-24 01:47:34,246] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2022-05-24 01:47:34,246] {subprocess.py:92} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2022-05-24 01:47:34,246] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+[2022-05-24 01:47:34,246] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2022-05-24 01:47:34,246] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2022-05-24 01:47:34,247] {subprocess.py:92} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2022-05-24 01:47:34,255] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,255] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,255] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,256] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,256] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,256] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,257] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,257] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,257] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,257] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,258] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,258] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,258] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,259] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,259] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,259] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,259] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,260] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,260] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,260] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,261] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,261] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,261] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,262] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,262] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,262] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,263] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,263] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,263] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,264] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,264] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,264] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,265] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,265] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,265] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,266] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,266] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,266] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,267] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,267] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,268] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,268] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,268] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,269] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,269] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,269] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,270] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,270] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,270] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,271] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [root] ERROR: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:47:34,271] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.middleware] INFO: Enabled item pipelines:
+[2022-05-24 01:47:34,271] {subprocess.py:92} INFO - ['hotel.pipelines.QuotesSpiderPipeline']
+[2022-05-24 01:47:34,271] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.core.engine] INFO: Spider opened
+[2022-05-24 01:47:34,438] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 01:47:34,439] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+[2022-05-24 01:47:34,776] {subprocess.py:92} INFO - 2022-05-24 01:47:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (308) to <GET https://www.traveloka.com/vi-vn/hotel> from <GET https://www.traveloka.com/vi-vn/hotel/>
+[2022-05-24 01:47:41,963] {subprocess.py:92} INFO - 2022-05-24 01:47:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel> (referer: None)
+[2022-05-24 01:47:46,479] {subprocess.py:92} INFO - 2022-05-24 01:47:46 [tldextract.cache] WARNING: unable to cache publicsuffix.org-tlds.{'urls': ('https://publicsuffix.org/list/public_suffix_list.dat', 'https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat'), 'fallback_to_snapshot': True} in /home/***/.cache/python-tldextract/3.7.13.final__local__ecb11d__tldextract-3.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json. This could refresh the Public Suffix List over HTTP every app startup. Construct your `TLDExtract` with a writable `cache_dir` or set `cache_dir=None` to silence this warning. [Errno 13] Permission denied: '/home/***/.cache/python-tldextract'
+[2022-05-24 01:47:46,487] {subprocess.py:92} INFO - 2022-05-24 01:47:46 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+[2022-05-24 01:47:46,661] {subprocess.py:92} INFO - 2022-05-24 01:47:46 [urllib3.connectionpool] DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 None
+[2022-05-24 01:47:46,727] {subprocess.py:92} INFO - 2022-05-24 01:47:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-city-10010083>
+[2022-05-24 01:47:53,308] {subprocess.py:92} INFO - 2022-05-24 01:47:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:47:59,400] {subprocess.py:92} INFO - 2022-05-24 01:47:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ho-chi-minh-city-10009794> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:47:59,564] {subprocess.py:92} INFO - 2022-05-24 01:47:59 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+[2022-05-24 01:48:03,518] {subprocess.py:92} INFO - 2022-05-24 01:48:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:48:08,026] {subprocess.py:92} INFO - 2022-05-24 01:48:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/quy-nhon-city-10009975> (failed 1 times): 502 Bad Gateway
+[2022-05-24 01:48:16,432] {subprocess.py:92} INFO - 2022-05-24 01:48:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:48:22,153] {subprocess.py:92} INFO - 2022-05-24 01:48:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-10010308> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-ancient-town-10010308>
+[2022-05-24 01:48:29,627] {subprocess.py:92} INFO - 2022-05-24 01:48:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-10010169> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-city-10010169>
+[2022-05-24 01:48:33,519] {subprocess.py:92} INFO - 2022-05-24 01:48:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-10009843> from <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-noi-city-10009843>
+[2022-05-24 01:48:34,439] {subprocess.py:92} INFO - 2022-05-24 01:48:34 [scrapy.extensions.logstats] INFO: Crawled 5 pages (at 5 pages/min), scraped 0 items (at 0 items/min)
+[2022-05-24 01:48:41,218] {subprocess.py:92} INFO - 2022-05-24 01:48:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/vung-tau-city-10009888> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:48:48,748] {subprocess.py:92} INFO - 2022-05-24 01:48:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:48:55,610] {subprocess.py:92} INFO - 2022-05-24 01:48:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:49:02,276] {subprocess.py:92} INFO - 2022-05-24 01:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/da-nang-10010083> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:49:09,074] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:09,239] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,239] {subprocess.py:92} INFO - {'hotel_address': 'Số 12 Đường Hạ Long, Phường Bãi Cháy, phường Bãi Cháy, '
+[2022-05-24 01:49:09,239] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:09,239] {subprocess.py:92} INFO -  'hotel_name': 'Wyndham Legend Halong Hotel',
+[2022-05-24 01:49:09,240] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:09,240] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,240] {subprocess.py:92} INFO -  'hotel_sum_review': '159',
+[2022-05-24 01:49:09,240] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/wyndham-legend-halong-hotel-1000000620395'}
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 1, Khu 2, phường Bãi Cháy, phường Bãi Cháy, Thành phố Hạ '
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -                   'Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Mường Thanh Luxury Quảng Ninh',
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -  'hotel_sum_review': '245',
+[2022-05-24 01:49:09,242] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/muong-thanh-luxury-quang-ninh-hotel-1000000456656'}
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO - {'hotel_address': 'Đảo Rều, Bãi Cháy , Thành phố Hạ Long, Tỉnh Quảng Ninh, '
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO -                   'Việt Nam, 20000',
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO -  'hotel_name': 'Vinpearl Resort & Spa Ha Long',
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:09,244] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,245] {subprocess.py:92} INFO -  'hotel_sum_review': '56',
+[2022-05-24 01:49:09,245] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinpearl-resort--spa-ha-long-3000020000164'}
+[2022-05-24 01:49:09,246] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,246] {subprocess.py:92} INFO - {'hotel_address': 'FLC Hạ Long, Nguyễn Văn Cừ, phường Hà Trung, Thành phố Hạ '
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -                   'Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -  'hotel_name': 'FLC Halong Bay Golf Club & Luxury Resort',
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -  'hotel_sum_review': '79',
+[2022-05-24 01:49:09,247] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/flc-halong-bay-golf-club--luxury-resort-3000020019359'}
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO - {'hotel_address': 'Dock Number 16, Tuan Chau Island, , phường Bãi Cháy, Thành '
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO -                   'phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO -  'hotel_name': 'Du thuyền Alisa',
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:09,249] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,250] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:09,250] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/alisa-cruises-3000010025002'}
+[2022-05-24 01:49:09,251] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,251] {subprocess.py:92} INFO - {'hotel_address': 'Cảng Tuần Chấu, phường Tuần Châu, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:09,251] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 202911',
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO -  'hotel_name': 'Orchid Ha Long Cruise',
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO -  'hotel_point_review': '8.6',
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/orchid-ha-long-cruise-1000000619196'}
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,252] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,253] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,254] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,255] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,256] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,257] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - {'hotel_address': '06A Lê Thánh Tông, Cảng Hòn Gai - Vinashin, phường Hồng '
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -                   'Gai, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_name': 'Du thuyền Royal Wings',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_point_review': '9.3',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_sum_review': '16',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/royal-wings-cruise-1000000561089'}
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278/5-star-hotels-in-ha-long-city>
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO - {'hotel_address': 'Đảo Tuần Châu, phường Tuần Châu, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_name': 'Paradise Luxury Cruise',
+[2022-05-24 01:49:09,258] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO -  'hotel_rating': '5',
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO -  'hotel_sum_review': '8',
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/paradise-luxury-cruise-1000000426786'}
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,259] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,260] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:09,261] {subprocess.py:92} INFO - 2022-05-24 01:49:09 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:09,262] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:15,838] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/vinmec-ha-long-hospital-91574756294036> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/vinmec-ha-long-hospital-91574756294036>
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO - {'hotel_address': 'Phu Gia 1-08, Vinhomes Dragon Bay, phường Hồng Gai, Thành '
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO -                   'phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 0203',
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Thanh Long',
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:15,986] {subprocess.py:92} INFO -  'hotel_sum_review': '14',
+[2022-05-24 01:49:15,987] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/thanh-long-hotel-9000000921499'}
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/vinmec-ha-long-hospital-91574756294036>
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO - {'hotel_address': 'Phu Gia 1, Hong Gai, phường Hồng Gai, Thành phố Hạ Long, '
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO -                   'Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO -  'hotel_name': 'Vinhome Green House Hạ Long',
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO -  'hotel_rating': '3.5',
+[2022-05-24 01:49:15,989] {subprocess.py:92} INFO -  'hotel_sum_review': '41',
+[2022-05-24 01:49:15,990] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/vinhome-green-house-ha-long-9000000847061'}
+[2022-05-24 01:49:15,991] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/vinmec-ha-long-hospital-91574756294036>
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO - {'hotel_address': '21 Phu Gia 4 Vinhomes Dragon Bay, Hong Gai, phường Hồng '
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -                   'Gai, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -  'hotel_name': 'Draha Halong Hotel',
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -  'hotel_rating': '3.5',
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -  'hotel_sum_review': '26',
+[2022-05-24 01:49:15,992] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/draha-halong-hotel-9000000354465'}
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/vinmec-ha-long-hospital-91574756294036>
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO - {'hotel_address': '6 Lê Thánh Tông, phường Hồng Gai, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 70000',
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -  'hotel_name': 'Signature Halong Cruise',
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -  'hotel_sum_review': '63',
+[2022-05-24 01:49:15,995] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/signature-halong-cruise-3000020006421'}
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:15,997] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:15,998] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:15,999] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:16,000] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - 2022-05-24 01:49:15 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:16,001] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:16,002] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:23,804] {subprocess.py:92} INFO - 2022-05-24 01:49:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cha-li-m-91566986000355> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO - 2022-05-24 01:49:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cha-li-m-91566986000355>
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO - {'hotel_address': 'Khu do thi Tay Hung Thang, Hung Thang, phường Hà Khẩu, '
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO -  'hotel_name': 'Dragon Hotel',
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 01:49:23,950] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:23,951] {subprocess.py:92} INFO -  'hotel_sum_review': '13',
+[2022-05-24 01:49:23,951] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/dragon-hotel-9000000337162'}
+[2022-05-24 01:49:23,952] {subprocess.py:92} INFO - 2022-05-24 01:49:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cha-li-m-91566986000355>
+[2022-05-24 01:49:23,952] {subprocess.py:92} INFO - {'hotel_address': 'Khu Biệt Thự Tây Hùng Thắng, phường Hùng Thắng, Thành phố '
+[2022-05-24 01:49:23,952] {subprocess.py:92} INFO -                   'Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:23,953] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Venus',
+[2022-05-24 01:49:23,953] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:23,953] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:23,953] {subprocess.py:92} INFO -  'hotel_sum_review': '23',
+[2022-05-24 01:49:23,953] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/venus-hotel-3000010025376'}
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - 2022-05-24 01:49:23 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:23,956] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - 2022-05-24 01:49:23 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:23,957] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:23,958] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,433] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:27,581] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,581] {subprocess.py:92} INFO - {'hotel_address': 'Số 81, đường 25/4, Phường Bạch Đằng, phường Bạch Đằng, '
+[2022-05-24 01:49:27,581] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,581] {subprocess.py:92} INFO -  'hotel_name': 'Paradis Halong Hotel',
+[2022-05-24 01:49:27,581] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 01:49:27,582] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:49:27,582] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:27,582] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/paradis-halong-hotel-3000010029722'}
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 65, Khu 5, Phường Bạch Đằng, Cảng Hòn Gai, phường Bạch '
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -                   'Đằng, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Ha Long Park',
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -  'hotel_sum_review': '184',
+[2022-05-24 01:49:27,584] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ha-long-park-hotel-3000010021776'}
+[2022-05-24 01:49:27,586] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,586] {subprocess.py:92} INFO - {'hotel_address': '7/19 Giếng Đồn, Trần Hưng Đạo, Tran Hung Dao Ward, '
+[2022-05-24 01:49:27,586] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,586] {subprocess.py:92} INFO -  'hotel_name': 'Zostay Halong Backpackers',
+[2022-05-24 01:49:27,586] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 01:49:27,587] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:27,587] {subprocess.py:92} INFO -  'hotel_sum_review': '20',
+[2022-05-24 01:49:27,587] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/zostay-halong-backpackers-3000020004705'}
+[2022-05-24 01:49:27,588] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,588] {subprocess.py:92} INFO - {'hotel_address': '168 Le Thanh Tong, Bach Dang, Ha Long, Quang Ninh, phường '
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -                   'Bạch Đằng, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, '
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -                   '200000',
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -  'hotel_name': 'SOJO Hotel Ha Long',
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -  'hotel_sum_review': '54',
+[2022-05-24 01:49:27,589] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/sojo-hotel-ha-long-9000000985272'}
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO - {'hotel_address': '156B Lê Thánh Tông, phường Bạch Đằng, Thành phố Hạ Long, '
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -                   'Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -  'hotel_name': 'City Bay Hotel',
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -  'hotel_point_review': '7.7',
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -  'hotel_sum_review': '11',
+[2022-05-24 01:49:27,591] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/city-bay-hotel-1000000475580'}
+[2022-05-24 01:49:27,593] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,593] {subprocess.py:92} INFO - {'hotel_address': '95 Đường 25 Tháng 4, Phường Bạch Đằng, phường Bạch Đằng, '
+[2022-05-24 01:49:27,593] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 100000',
+[2022-05-24 01:49:27,593] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn London',
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO -  'hotel_sum_review': '129',
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/london-hotel-3000010036273'}
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,594] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,595] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,596] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,597] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,598] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,599] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,600] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,601] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,602] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO - {'hotel_address': '156 Lê Thánh Tông, phường Bạch Đằng, Thành phố Hạ Long, '
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -                   'Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -  'hotel_name': 'City Bay Palace Hotel',
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -  'hotel_point_review': '9.4',
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -  'hotel_rating': '3.5',
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 01:49:27,603] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/city-bay-palace-hotel-1000000463947'}
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO - {'hotel_address': 'Hon Gai Harbor, phường Bạch Đằng, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam',
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO -  'hotel_name': 'Du thuyền Amira Cruise',
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO -  'hotel_point_review': '7.5',
+[2022-05-24 01:49:27,604] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/amira-cruise-1000001131403'}
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO - {'hotel_address': '9 Dong Ho, phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng '
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -                   'Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Ruby',
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -  'hotel_point_review': '7.5',
+[2022-05-24 01:49:27,607] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_sum_review': '17',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ruby-hotel-4000000439970'}
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO - {'hotel_address': 'Lê Thánh Tông, phường Bạch Đằng, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_name': 'Du thuyền Signature Royal',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_point_review': '7.2',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:27,608] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/signature-royal-cruise-3000020006443'}
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,609] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,610] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,611] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,612] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,613] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,614] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,615] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,616] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO - {'hotel_address': '73 Kênh Liêm, phường Bạch Đằng, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_name': 'Halo Bay Homestay',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/halo-bay-homestay-3000020017153'}
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/cng-vin-hoa-h-long-91566906153393>
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO - {'hotel_address': '70 Lê Thánh Tông, phường Bạch Đằng, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Queen Ha Long',
+[2022-05-24 01:49:27,617] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO -  'hotel_rating': '1.5',
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/queen-hotel-ha-long-3000010029307'}
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,618] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - 2022-05-24 01:49:27 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:27,619] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:27,620] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:27,620] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:27,620] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:27,620] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:27,620] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,351] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:34,438] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.extensions.logstats] INFO: Crawled 14 pages (at 9 pages/min), scraped 26 items (at 26 items/min)
+[2022-05-24 01:49:34,488] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,488] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 65, Khu 5, Phường Bạch Đằng, Cảng Hòn Gai, phường Bạch '
+[2022-05-24 01:49:34,488] {subprocess.py:92} INFO -                   'Đằng, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,488] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Ha Long Park',
+[2022-05-24 01:49:34,489] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:34,489] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:34,489] {subprocess.py:92} INFO -  'hotel_sum_review': '184',
+[2022-05-24 01:49:34,489] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ha-long-park-hotel-3000010021776'}
+[2022-05-24 01:49:34,491] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,491] {subprocess.py:92} INFO - {'hotel_address': '9 Dong Ho, phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng '
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -                   'Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Ruby',
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -  'hotel_point_review': '8.4',
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:34,492] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ruby-hotel-4000000439970'}
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO - {'hotel_address': '14 Phan Dang Luu, Hong Hai, phường Hồng Hải, Thành phố Hạ '
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -                   'Long, Tỉnh Quảng Ninh, Việt Nam, 0203',
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Mekong Hạ Long',
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -  'hotel_point_review': '8.9',
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -  'hotel_sum_review': '23',
+[2022-05-24 01:49:34,495] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/mekong-halong-hotel-9000000907820'}
+[2022-05-24 01:49:34,497] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO - {'hotel_address': '73 Kênh Liêm, phường Bạch Đằng, Thành phố Hạ Long, Tỉnh '
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -                   'Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -  'hotel_name': 'Halo Bay Homestay',
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -  'hotel_sum_review': '20',
+[2022-05-24 01:49:34,498] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/halo-bay-homestay-3000020017153'}
+[2022-05-24 01:49:34,500] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,500] {subprocess.py:92} INFO - {'hotel_address': 'A3-02 Monbay, Phố Hải Long, phường Hồng Hải, Thành phố Hạ '
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -                   'Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -  'hotel_name': 'Luxstay Hotel Ha Long',
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -  'hotel_point_review': '7.5',
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/luxstay-hotel-ha-long-9000000170883'}
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,501] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,502] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,503] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,504] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,505] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,506] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO - {'hotel_address': 'Số 81, đường 25/4, Phường Bạch Đằng, phường Bạch Đằng, '
+[2022-05-24 01:49:34,507] {subprocess.py:92} INFO -                   'Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_name': 'Paradis Halong Hotel',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_point_review': '7.7',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_sum_review': '11',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/paradis-halong-hotel-3000010029722'}
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO - {'hotel_address': 'D307 Khu Đô Thị Mới Mon Bay, phường Hồng Hải, Thành phố Hạ '
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -                   'Long, Tỉnh Quảng Ninh, Việt Nam, 200000',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_name': 'BBQ Hostel Halong',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_rating': '2.5',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_sum_review': '54',
+[2022-05-24 01:49:34,508] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/bbq-hostel-halong-9000000369763'}
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/ho-co-tien-lake-91548652190912>
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO - {'hotel_address': 'Line D2, House 3-4-5, Monbay Urban area, Hong Hai Ward, '
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -                   'phường Hồng Hải, Thành phố Hạ Long, Tỉnh Quảng Ninh, Việt '
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -                   'Nam',
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Top One Halong',
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -  'hotel_point_review': '8.7',
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -  'hotel_sum_review': '129',
+[2022-05-24 01:49:34,509] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/top-one-halong-hotel-9000000638860'}
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,512] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,513] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,514] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - 2022-05-24 01:49:34 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:34,515] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:34,516] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:41,120] {subprocess.py:92} INFO - 2022-05-24 01:49:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hai-ha-10010563> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/ha-long-city-30010278)
+[2022-05-24 01:49:45,856] {subprocess.py:92} INFO - 2022-05-24 01:49:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/region/ho-chi-minh-city-10009794)
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO - {'hotel_address': 'số nhà 47 đường 3/2, thị trấn Đồng Văn, thị trấn Đồng Văn, '
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -                   'Đồng Văn, Hà Giang, Việt Nam, 310000',
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -  'hotel_name': 'Hoang Ngoc Hotel - Ha Giang',
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -  'hotel_sum_review': '108',
+[2022-05-24 01:49:46,013] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/hoang-ngoc-hotel---ha-giang-3000010036848'}
+[2022-05-24 01:49:46,015] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,015] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 1, Xã Cầu Mè, Phường Nguyễn Trãi, xã Phương Thiện, Thành '
+[2022-05-24 01:49:46,015] {subprocess.py:92} INFO -                   'phố Hà Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 01:49:46,015] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Anh Anh',
+[2022-05-24 01:49:46,015] {subprocess.py:92} INFO -  'hotel_point_review': '8.2',
+[2022-05-24 01:49:46,016] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:46,016] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 01:49:46,016] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/anh-anh-hotel-3000010036618'}
+[2022-05-24 01:49:46,017] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,017] {subprocess.py:92} INFO - {'hotel_address': 'Km 5, Nguyễn Văn Linh, phường Quang Trung, Thành phố Hà '
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -  'hotel_name': 'Resort Trường Xuân',
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:46,018] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/truong-xuan-resort-3000010036659'}
+[2022-05-24 01:49:46,019] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 2, Mèo Vạc, thị trấn Mèo Vạc, Mèo Vạc, Hà Giang, Việt '
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -                   'Nam, 310000',
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Huyền Lợi',
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -  'hotel_point_review': '8.1',
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -  'hotel_rating': '1.5',
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -  'hotel_sum_review': '8',
+[2022-05-24 01:49:46,020] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/huyen-loi-hotel-3000010036809'}
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO - {'hotel_address': 'Phuong Thien, xã Phương Thiện, Thành phố Hà Giang, Hà '
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 20000',
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -  'hotel_name': 'Hà Giang Hostel',
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -  'hotel_point_review': '7.6',
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -  'hotel_sum_review': '9',
+[2022-05-24 01:49:46,022] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/ha-giang-hostel-9000000553069'}
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO - {'hotel_address': '525 Nguyễn Trãi, phường Nguyễn Trãi, Thành phố Hà Giang, Hà '
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 311001',
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -  'hotel_name': 'Nhà nghỉ Hương Trà 2',
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -  'hotel_point_review': '9.1',
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/huong-tra-guesthouse-1-3000010037412'}
+[2022-05-24 01:49:46,024] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,025] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,026] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,027] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,028] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,029] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,030] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,031] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO - {'hotel_address': 'Tổ 7, Đồng Văn, thị trấn Đồng Văn, Đồng Văn, Hà Giang, Việt '
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -                   'Nam, 310000',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_name': 'Tam Giac Mach Hotel',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_point_review': '8.3',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_sum_review': '28',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/tam-giac-mach-hotel-3000010036844'}
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO - {'hotel_address': '85 Minh Khai, phường Minh Khai, Thành phố Hà Giang, Hà '
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -                   'Giang, Việt Nam, 311021',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_name': '10am Hostel',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_point_review': '8.8',
+[2022-05-24 01:49:46,032] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/10am-hostel-3000010037804'}
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO - {'hotel_address': '529A Nguyễn Văn Linh, phường Quang Trung, Thành phố Hà '
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 310000',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_name': 'Green Hill Hostel',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_point_review': '7.9',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_rating': '2',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_sum_review': '31',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/green-hill-hostel-3000020006053'}
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/region/ha-giang-province-10009852>
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO - {'hotel_address': '228 Ly Tu Trong Street, phường Trần Phú, Thành phố Hà '
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -                   'Giang, Hà Giang, Việt Nam, 70000',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_name': 'Khách sạn Tam Giác Mạch - Hà Giang',
+[2022-05-24 01:49:46,033] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 01:49:46,034] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:49:46,034] {subprocess.py:92} INFO -  'hotel_sum_review': '6',
+[2022-05-24 01:49:46,034] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/tam-giac-mach-hotel-ha-giang-3000010042023'}
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,035] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,036] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,037] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,038] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - 2022-05-24 01:49:46 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:46,039] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:46,040] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:46,040] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:46,040] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:46,040] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:48,254] {subprocess.py:92} INFO - 2022-05-24 01:49:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/quang-dien-10010568> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311)
+[2022-05-24 01:49:55,646] {subprocess.py:92} INFO - 2022-05-24 01:49:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/phong-dien-10010516> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/hue-city-10010311)
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO - 2022-05-24 01:49:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/phong-dien-10010516>
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Thanh Tân, Xã Phong Sơn, Phong Son Commune, Phong '
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -                   'Điền, Tỉnh Thừa Thiên Huế, Việt Nam, 535165',
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -  'hotel_name': 'Thanh Tan Hot Springs By Fusion',
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -  'hotel_point_review': '8.2',
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -  'hotel_rating': '3.5',
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -  'hotel_sum_review': '29',
+[2022-05-24 01:49:55,784] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/thanh-tan-hot-springs-by-fusion-1000000467795'}
+[2022-05-24 01:49:55,786] {subprocess.py:92} INFO - 2022-05-24 01:49:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/phong-dien-10010516>
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO - {'hotel_address': 'Phong Sơn, Phong Điền, Phong Son Commune, Phong Điền, Tỉnh '
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -                   'Thừa Thiên Huế, Việt Nam, 530000',
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -  'hotel_name': 'Khu nghỉ dưỡng Alba Wellness',
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -  'hotel_rating': '4',
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -  'hotel_sum_review': '51',
+[2022-05-24 01:49:55,787] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/alba-wellness-resort-by-fusion-3000020006246'}
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - 2022-05-24 01:49:55 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:55,790] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - ]
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - 2022-05-24 01:49:55 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:49:55,791] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:49:55,792] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:49:55,793] {subprocess.py:92} INFO - ]
+[2022-05-24 01:50:02,127] {subprocess.py:92} INFO - 2022-05-24 01:50:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/hoi-an-10010308> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:50:07,966] {subprocess.py:92} INFO - 2022-05-24 01:50:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/da-lat-10010169> (referer: https://www.traveloka.com/vi-vn/hotel)
+[2022-05-24 01:50:13,703] {subprocess.py:92} INFO - 2022-05-24 01:50:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/bac-binh-district-10010010> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286)
+[2022-05-24 01:50:13,839] {subprocess.py:92} INFO - 2022-05-24 01:50:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/bac-binh-district-10010010>
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO - {'hotel_address': 'Thôn Hồng Chính, Xã Hòa Thắng, Xã Hòa Thắng, Bắc Bình, Bình '
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -                   'Thuận, Việt Nam, 770000',
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -  'hotel_name': 'Stop And Go Lang Chai Boutique Resort',
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -  'hotel_point_review': '8.5',
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -  'hotel_rating': '3',
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -  'hotel_sum_review': '5',
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/stop-and-go-lang-chai-boutique-resort-9000000323778'}
+[2022-05-24 01:50:13,840] {subprocess.py:92} INFO - 2022-05-24 01:50:13 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:50:13,841] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:50:13,842] {subprocess.py:92} INFO - ]
+[2022-05-24 01:50:21,291] {subprocess.py:92} INFO - 2022-05-24 01:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/tuy-phong-district-10009824> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phan-thiet-10010286)
+[2022-05-24 01:50:21,423] {subprocess.py:92} INFO - 2022-05-24 01:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.traveloka.com/vi-vn/hotel/vietnam/city/tuy-phong-district-10009824>
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO - {'hotel_address': '193 Lý Thường Kiệt, Thị Trấn Phan Rí Cửa, Thị trấn Phan Rí '
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -                   'Cửa, Tuy Phong, Bình Thuận, Việt Nam, 802472',
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -  'hotel_name': 'Flora Hotel - Phan Rí',
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -  'hotel_point_review': '9.0',
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -  'hotel_rating': '1',
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -  'hotel_sum_review': '7',
+[2022-05-24 01:50:21,424] {subprocess.py:92} INFO -  'hotel_url': 'https://www.traveloka.com/vi-vn/hotel/vietnam/flora-hotel---phan-ri-9000000324794'}
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - 2022-05-24 01:50:21 [root] ERROR: [Failure instance: Traceback: <class 'MySQLdb._exceptions.OperationalError'>: (2003, "Can't connect to MySQL server on '127.20.0.1:3306' (111)")
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:926:_bootstrap_inner
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /usr/local/lib/python3.7/threading.py:870:run
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_threadworker.py:47:work
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/_threads/_team.py:182:doWork
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:244:inContext
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/threadpool.py:261:<lambda>
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:117:callWithContext
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/python/context.py:82:callWithContext
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:440:_runInteraction
+[2022-05-24 01:50:21,428] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:34:__init__
+[2022-05-24 01:50:21,429] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:71:reconnect
+[2022-05-24 01:50:21,429] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/twisted/enterprise/adbapi.py:410:connect
+[2022-05-24 01:50:21,429] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/__init__.py:123:Connect
+[2022-05-24 01:50:21,429] {subprocess.py:92} INFO - /home/***/.local/lib/python3.7/site-packages/MySQLdb/connections.py:185:__init__
+[2022-05-24 01:50:21,429] {subprocess.py:92} INFO - ]
+[2022-05-24 01:50:25,571] {subprocess.py:92} INFO - 2022-05-24 01:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/chau-duc-district-10010104> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/vung-tau-city-10009888)
+[2022-05-24 01:50:29,697] {subprocess.py:92} INFO - 2022-05-24 01:50:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/an-bien-district-10009964> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/phu-quoc-10011570)
+[2022-05-24 01:50:34,440] {subprocess.py:92} INFO - 2022-05-24 01:50:34 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 10 pages/min), scraped 48 items (at 22 items/min)
+[2022-05-24 01:50:37,040] {subprocess.py:92} INFO - 2022-05-24 01:50:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.traveloka.com/vi-vn/hotel/vietnam/city/dien-khanh-district-10010164> (referer: https://www.traveloka.com/vi-vn/hotel/vietnam/city/nha-trang-10010498)

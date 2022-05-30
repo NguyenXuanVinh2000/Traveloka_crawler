@@ -1,0 +1,185 @@
+[2022-05-23 17:50:22,186] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data scheduled__2022-05-23T17:40:00+00:00 [queued]>
+[2022-05-23 17:50:22,196] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data scheduled__2022-05-23T17:40:00+00:00 [queued]>
+[2022-05-23 17:50:22,196] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-23 17:50:22,196] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-05-23 17:50:22,196] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-23 17:50:22,233] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): crawl_data> on 2022-05-23 17:40:00+00:00
+[2022-05-23 17:50:22,238] {standard_task_runner.py:52} INFO - Started process 104 to run task
+[2022-05-23 17:50:22,242] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'TRAVELOKA_V1', 'crawl_data', 'scheduled__2022-05-23T17:40:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/test/test.py', '--cfg-path', '/tmp/tmpwsmxkvrm', '--error-file', '/tmp/tmph10z9rje']
+[2022-05-23 17:50:22,242] {standard_task_runner.py:80} INFO - Job 7: Subtask crawl_data
+[2022-05-23 17:50:22,322] {task_command.py:369} INFO - Running <TaskInstance: TRAVELOKA_V1.crawl_data scheduled__2022-05-23T17:40:00+00:00 [running]> on host b52ab4b8894a
+[2022-05-23 17:50:22,486] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=TRAVELOKA_V1
+AIRFLOW_CTX_DAG_ID=TRAVELOKA_V1
+AIRFLOW_CTX_TASK_ID=crawl_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-23T17:40:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-23T17:40:00+00:00
+[2022-05-23 17:50:22,487] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-23 17:50:22,487] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dags/test && scrapy crawl hotel']
+[2022-05-23 17:50:22,497] {subprocess.py:85} INFO - Output:
+[2022-05-23 17:50:36,304] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: hotel)
+[2022-05-23 17:50:36,313] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.7.13 (default, Apr 20 2022, 06:19:04) - [GCC 10.2.1 20210110], pyOpenSSL 21.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform Linux-5.4.0-110-generic-x86_64-with-debian-11.3
+[2022-05-23 17:50:36,322] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'hotel', 'DOWNLOAD_DELAY': 5, 'FEED_EXPORT_ENCODING': 'utf-8', 'NEWSPIDER_MODULE': 'hotel.spiders', 'SPIDER_MODULES': ['hotel.spiders']}
+[2022-05-23 17:50:36,622] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.extensions.telnet] INFO: Telnet Password: a6f0a1d4f5ccf129
+[2022-05-23 17:50:36,705] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.middleware] INFO: Enabled extensions:
+[2022-05-23 17:50:36,705] {subprocess.py:92} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2022-05-23 17:50:36,705] {subprocess.py:92} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2022-05-23 17:50:36,705] {subprocess.py:92} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2022-05-23 17:50:36,705] {subprocess.py:92} INFO -  'scrapy.extensions.logstats.LogStats']
+[2022-05-23 17:50:36,756] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.core.downloader.handlers] ERROR: Loading "scrapy.core.downloader.handlers.http.HTTPDownloadHandler" for scheme "http"
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/__init__.py", line 48, in _load_handler
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -     dhcls = load_object(path)
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -     mod = import_module(module)
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-23 17:50:36,757] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http.py", line 3, in <module>
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -     from .http11 import HTTP11DownloadHandler as HTTPDownloadHandler
+[2022-05-23 17:50:36,758] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 26, in <module>
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO -     from scrapy.core.downloader.webclient import _parse
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/webclient.py", line 4, in <module>
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO -     from twisted.web.client import HTTPClientFactory
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO - ImportError: cannot import name 'HTTPClientFactory' from 'twisted.web.client' (unknown location)
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.core.downloader.handlers] ERROR: Loading "scrapy.core.downloader.handlers.http.HTTPDownloadHandler" for scheme "https"
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/__init__.py", line 48, in _load_handler
+[2022-05-23 17:50:36,759] {subprocess.py:92} INFO -     dhcls = load_object(path)
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -     mod = import_module(module)
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-23 17:50:36,760] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-23 17:50:36,761] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-23 17:50:36,761] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-23 17:50:36,761] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http.py", line 3, in <module>
+[2022-05-23 17:50:36,761] {subprocess.py:92} INFO -     from .http11 import HTTP11DownloadHandler as HTTPDownloadHandler
+[2022-05-23 17:50:36,761] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 26, in <module>
+[2022-05-23 17:50:36,762] {subprocess.py:92} INFO -     from scrapy.core.downloader.webclient import _parse
+[2022-05-23 17:50:36,762] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/webclient.py", line 4, in <module>
+[2022-05-23 17:50:36,762] {subprocess.py:92} INFO -     from twisted.web.client import HTTPClientFactory
+[2022-05-23 17:50:36,762] {subprocess.py:92} INFO - ImportError: cannot import name 'HTTPClientFactory' from 'twisted.web.client' (unknown location)
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [scrapy.core.downloader.handlers] ERROR: Loading "scrapy.core.downloader.handlers.s3.S3DownloadHandler" for scheme "s3"
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/__init__.py", line 48, in _load_handler
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -     dhcls = load_object(path)
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -     mod = import_module(module)
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-23 17:50:36,763] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/s3.py", line 6, in <module>
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -     from .http import HTTPDownloadHandler
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http.py", line 3, in <module>
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -     from .http11 import HTTP11DownloadHandler as HTTPDownloadHandler
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 26, in <module>
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -     from scrapy.core.downloader.webclient import _parse
+[2022-05-23 17:50:36,764] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/webclient.py", line 4, in <module>
+[2022-05-23 17:50:36,765] {subprocess.py:92} INFO -     from twisted.web.client import HTTPClientFactory
+[2022-05-23 17:50:36,765] {subprocess.py:92} INFO - ImportError: cannot import name 'HTTPClientFactory' from 'twisted.web.client' (unknown location)
+[2022-05-23 17:50:36,810] {subprocess.py:92} INFO - Unhandled error in Deferred:
+[2022-05-23 17:50:36,918] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [twisted] CRITICAL: Unhandled error in Deferred:
+[2022-05-23 17:50:36,918] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 172, in crawl
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -     return self._crawl(crawler, *args, **kwargs)
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 176, in _crawl
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -     d = crawler.crawl(*args, **kwargs)
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1905, in unwindGenerator
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -     return _cancellableInlineCallbacks(gen)
+[2022-05-23 17:50:36,919] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1815, in _cancellableInlineCallbacks
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -     _inlineCallbacks(None, gen, status)
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO - --- <exception caught here> ---
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -     result = current_context.run(gen.send, result)
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 80, in crawl
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -     self.engine = self._create_engine()
+[2022-05-23 17:50:36,920] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 105, in _create_engine
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -     return ExecutionEngine(self, lambda _: self.stop())
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -     self.downloader = downloader_cls(crawler)
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/__init__.py", line 88, in __init__
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -     self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/middleware.py", line 53, in from_crawler
+[2022-05-23 17:50:36,921] {subprocess.py:92} INFO -     return cls.from_settings(crawler.settings, crawler)
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/middleware.py", line 34, in from_settings
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -     mwcls = load_object(clspath)
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -     mod = import_module(module)
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-23 17:50:36,922] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,923] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/downloadermiddlewares/retry.py", line 24, in <module>
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -     from scrapy.core.downloader.handlers.http11 import TunnelError
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 26, in <module>
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -     from scrapy.core.downloader.webclient import _parse
+[2022-05-23 17:50:36,924] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/webclient.py", line 4, in <module>
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO -     from twisted.web.client import HTTPClientFactory
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO - builtins.ImportError: cannot import name 'HTTPClientFactory' from 'twisted.web.client' (unknown location)
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO - 
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO - 2022-05-23 17:50:36 [twisted] CRITICAL:
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO -     result = current_context.run(gen.send, result)
+[2022-05-23 17:50:36,925] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 80, in crawl
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -     self.engine = self._create_engine()
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 105, in _create_engine
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -     return ExecutionEngine(self, lambda _: self.stop())
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -     self.downloader = downloader_cls(crawler)
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/__init__.py", line 88, in __init__
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -     self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+[2022-05-23 17:50:36,926] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/middleware.py", line 53, in from_crawler
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -     return cls.from_settings(crawler.settings, crawler)
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/middleware.py", line 34, in from_settings
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -     mwcls = load_object(clspath)
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 44, in load_object
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -     mod = import_module(module)
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-23 17:50:36,927] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/downloadermiddlewares/retry.py", line 24, in <module>
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -     from scrapy.core.downloader.handlers.http11 import TunnelError
+[2022-05-23 17:50:36,928] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 26, in <module>
+[2022-05-23 17:50:36,929] {subprocess.py:92} INFO -     from scrapy.core.downloader.webclient import _parse
+[2022-05-23 17:50:36,929] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/core/downloader/webclient.py", line 4, in <module>
+[2022-05-23 17:50:36,929] {subprocess.py:92} INFO -     from twisted.web.client import HTTPClientFactory
+[2022-05-23 17:50:36,929] {subprocess.py:92} INFO - ImportError: cannot import name 'HTTPClientFactory' from 'twisted.web.client' (unknown location)
+[2022-05-23 17:50:36,929] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-23 17:50:37,018] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=TRAVELOKA_V1, task_id=crawl_data, execution_date=20220523T174000, start_date=20220523T175022, end_date=20220523T175037
+[2022-05-23 17:50:37,082] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-23 17:50:37,137] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,75 @@
+[2022-05-24 01:39:25,834] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:39:24.945265+00:00 [queued]>
+[2022-05-24 01:39:25,847] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:39:24.945265+00:00 [queued]>
+[2022-05-24 01:39:25,847] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:39:25,847] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-05-24 01:39:25,847] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-24 01:39:26,752] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): crawl_data> on 2022-05-24 01:39:24.945265+00:00
+[2022-05-24 01:39:26,790] {standard_task_runner.py:52} INFO - Started process 1151 to run task
+[2022-05-24 01:39:26,793] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'TRAVELOKA_V1', 'crawl_data', 'manual__2022-05-24T01:39:24.945265+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/test/test.py', '--cfg-path', '/tmp/tmpzrvy8d_n', '--error-file', '/tmp/tmpa4rakq12']
+[2022-05-24 01:39:26,793] {standard_task_runner.py:80} INFO - Job 28: Subtask crawl_data
+[2022-05-24 01:39:26,927] {task_command.py:369} INFO - Running <TaskInstance: TRAVELOKA_V1.crawl_data manual__2022-05-24T01:39:24.945265+00:00 [running]> on host d0800a19c55b
+[2022-05-24 01:39:27,117] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=TRAVELOKA_V1
+AIRFLOW_CTX_DAG_ID=TRAVELOKA_V1
+AIRFLOW_CTX_TASK_ID=crawl_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-24T01:39:24.945265+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-24T01:39:24.945265+00:00
+[2022-05-24 01:39:27,117] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-24 01:39:27,118] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dags/test && scrapy crawl hotel']
+[2022-05-24 01:39:27,128] {subprocess.py:85} INFO - Output:
+[2022-05-24 01:39:28,912] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:5: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,912] {subprocess.py:92} INFO -   hotel_name = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,912] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:6: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,912] {subprocess.py:92} INFO -   hotel_rating = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:7: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO -   hotel_address = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:8: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO -   hotel_point_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:9: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO -   hotel_sum_review = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO - /opt/***/dags/test/hotel/items.py:10: ScrapyDeprecationWarning: scrapy.loader.processors.TakeFirst is deprecated, instantiate itemloaders.processors.TakeFirst instead.
+[2022-05-24 01:39:28,913] {subprocess.py:92} INFO -   hotel_url = scrapy.Field(output_processor=TakeFirst())
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/bin/scrapy", line 8, in <module>
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -     sys.exit(execute())
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/cmdline.py", line 144, in execute
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -     cmd.crawler_process = CrawlerProcess(settings)
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 290, in __init__
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -     super().__init__(settings)
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 167, in __init__
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -     self.spider_loader = self._get_spider_loader(settings)
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 161, in _get_spider_loader
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -     return loader_cls.from_settings(settings.frozencopy())
+[2022-05-24 01:39:28,914] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/spiderloader.py", line 67, in from_settings
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -     return cls(settings)
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/spiderloader.py", line 24, in __init__
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -     self._load_all_spiders()
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/spiderloader.py", line 51, in _load_all_spiders
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -     for module in walk_modules(name):
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/scrapy/utils/misc.py", line 80, in walk_modules
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -     mod = import_module(path)
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[2022-05-24 01:39:28,915] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO -   File "/opt/***/dags/test/hotel/spiders/__init__.py", line 9, in <module>
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO -     from check_DB import *
+[2022-05-24 01:39:28,916] {subprocess.py:92} INFO - ModuleNotFoundError: No module named 'check_DB'
+[2022-05-24 01:39:29,001] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-05-24 01:39:29,022] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-05-24 01:39:29,026] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=TRAVELOKA_V1, task_id=crawl_data, execution_date=20220524T013924, start_date=20220524T013925, end_date=20220524T013929
+[2022-05-24 01:39:29,796] {standard_task_runner.py:97} ERROR - Failed to execute job 28 for task crawl_data (Bash command failed. The command returned a non-zero exit code 1.; 1151)
+[2022-05-24 01:39:29,813] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-24 01:39:29,945] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
